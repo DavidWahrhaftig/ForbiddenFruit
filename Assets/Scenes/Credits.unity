@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6664212}
   m_Layer: 5
-  m_Name: PROGRAMMING Text Group
+  m_Name: DEVELOPMENT Text Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1047,7 +1047,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'PROGRAMMING:'
+  m_Text: 'DEVELOPMENT:'
 --- !u!222 &1590542452
 CanvasRenderer:
   m_ObjectHideFlags: 0
