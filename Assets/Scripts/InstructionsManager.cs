@@ -10,6 +10,8 @@ public class InstructionsManager : MonoBehaviour
     [SerializeField] Animator fadeOut;
     [SerializeField] GameObject check1, check2;
 
+    private SceneChanger sceneChanger;
+
     bool playGame = false;
     
     // Start is called before the first frame update
@@ -17,6 +19,8 @@ public class InstructionsManager : MonoBehaviour
     {
         gamePadController1 = Rewired.ReInput.players.GetPlayer(0);
         gamePadController2 = Rewired.ReInput.players.GetPlayer(1);
+
+        sceneChanger = GameObject.FindObjectOfType<SceneChanger>();
     }
 
     // Update is called once per frame
@@ -33,29 +37,20 @@ public class InstructionsManager : MonoBehaviour
             check2.SetActive(gamePadController2.GetButton("Jump")); // visual check for player 2
         }
 
-
+        // Go To Game Scene
         if (gamePadController1.GetButton("Jump") && gamePadController2.GetButton("Jump") || Input.GetKeyDown(KeyCode.Return))
         {
             playGame = true;
-            fadeOut.SetTrigger("FadeOut");
-            Invoke("goToGameScene", 2.3f);
+            sceneChanger.goToScene(2, true);
+
         }
-            
+        
+        // Go Back To Main Menu Scene
         if (gamePadController1.GetButtonDown("Camera Flip") || gamePadController2.GetButtonDown("Camera Flip"))
         {
-            fadeOut.SetTrigger("FadeOut");
-            Invoke("goToMenuScene", 2.3f);
+            sceneChanger.goToScene(0, true);
         }
             
     }
 
-    void goToGameScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    void goToMenuScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    }
 }

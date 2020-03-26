@@ -7,49 +7,51 @@ public class MainMenu : MonoBehaviour
 {
 
     public Animator gateAnimator;
-    public Animator fadeAnimator;
     public Transform camera;
 
+    private SceneChanger sceneChanger;
+    private int nextSceneIndex = 0;
 
-    bool moveCamera = false;
+    private bool moveCamera = false;
+
+    private void Start()
+    {
+        sceneChanger = FindObjectOfType<SceneChanger>();
+    }
     private void Update()
     {
      
         if (moveCamera)
         {
             camera.transform.Translate(transform.forward * 0.08f, Space.World);
-            fadeAnimator.SetTrigger("FadeOut");
-            Invoke("OpenInstructions", 2.3f);
+            sceneChanger.goToScene(nextSceneIndex, true);            
         }
-
-    }
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void OpenInstructions()
+    private void transitionAnimation()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // open gate, move camera forwrad and fade out scene
+        gateAnimator.SetTrigger("open");
+        camera.GetComponent<CameraOscillator>().isOscillating = false;
+        moveCamera = true;
+    }
+
+    public void PlayGameWithEntrance()
+    {
+        nextSceneIndex = 1;
+        transitionAnimation();
+    }
+
+
+    public void CreditsWithEntrance()
+    {
+        nextSceneIndex = 3;  
+        transitionAnimation();
     }
 
     public void QuitGame()
     {
         Application.Quit();
-    }
-
-    public void PlayGameWithEntrance()
-    {
-        // open gate
-        gateAnimator.SetTrigger("open");
-
-        //
-        camera.GetComponent<CameraOscillator>().isOscillating = false;
-        moveCamera = true;
-
-        
-        // open gate, move camera forwrad and fade out scene
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
