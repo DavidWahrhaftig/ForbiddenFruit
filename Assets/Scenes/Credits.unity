@@ -666,7 +666,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "David Wahrhaftig\r\nPhilip Smith\r\nThomas Connolly \r\nLynn Liu\r"
+  m_Text: "Philip Smith\r\nDavid Wahrhaftig\r\nThomas Connolly \r\nLynn Liu\r"
 --- !u!222 &310498263
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1124,7 +1124,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Alexandra Montero\r\nLucas Cortes\r\nHwan"
+  m_Text: "Alexandra Montero\r\nLucas Cortes\r\nYong Hwan"
 --- !u!222 &1699017417
 CanvasRenderer:
   m_ObjectHideFlags: 0
