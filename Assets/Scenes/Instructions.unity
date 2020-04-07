@@ -150,8 +150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOut: {fileID: 995165076}
-  check1: {fileID: 656025258}
-  check2: {fileID: 1431074945}
+  sound: {fileID: 1628321730}
+  check1: {fileID: 656025260}
+  check2: {fileID: 1431074947}
+  checkTransparency: 0.15
 --- !u!4 &275236272
 Transform:
   m_ObjectHideFlags: 0
