@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class ScarecrowLogicMilestone5 : MonoBehaviour
 {
     [SerializeField] int snatchQuantity = 1;
-    [SerializeField] float fruitSnatchTimeThreshold = 3f;
+    [SerializeField] float fruitSnatchTimeThreshold = 6f;
 
     [SerializeField] Transform scarecrowRotation;
     [SerializeField] Animator scarecrowAnimator;
@@ -16,9 +16,10 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     private Vector3 direction;
 
     private float fruitSnatchTimer = 0f;
-    public float maxAudioDistance = 10f;
+    public float maxAudioDistance = 7f;
     private float initialVolume;
     private AudioSource audioSource;
+    private Transform lastPlayerEntered;
     
 
     private void Start()
@@ -46,10 +47,14 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
         //Debug.Log("Collision Tag: " + other.transform.tag);
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
+            lastPlayerEntered = other.transform; // incase both players enter the scarecrow radius
+
             scarecrowAnimator.SetTrigger("scare");
             if (canHarmPlayer(other.gameObject))
             {
-                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                //other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                other.GetComponent<PlayerLogic>().activateScarecorwSpell();
+                //other.GetComponent<Animator>().SetBool("scarecrowSpellOn", true);
             }
         }
 
@@ -61,7 +66,7 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
 
-            direction = GameObject.FindGameObjectWithTag(other.transform.tag).transform.position - scarecrowRotation.position;
+            direction = lastPlayerEntered.position - scarecrowRotation.position;
             scarecrowRotation.rotation = Quaternion.Slerp(scarecrowRotation.rotation, Quaternion.LookRotation(direction), rotationSpeed);
 
             if (canHarmPlayer(other.gameObject))
@@ -69,7 +74,9 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
                 fruitSnatchTimer += Time.deltaTime;
                 if (fruitSnatchTimer > fruitSnatchTimeThreshold)
                 {
-                    other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                    //other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                    other.GetComponent<PlayerLogic>().activateScarecorwSpell();
+                    //other.GetComponent<Animator>().SetBool("scarecrowSpellOn", true);
                     //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
                     fruitSnatchTimer = 0f;
                 }
@@ -99,6 +106,5 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
 
         return Mathf.Min(Vector3.Distance(player1.position, transform.position), Vector3.Distance(player2.position, transform.position));
     }
-    
 
 }

@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     bool isLevitating = false;
     bool isCollectingFruit = false;
+    bool isUnderSpell = false;
     #endregion
 
     #region Controller Inputs
@@ -124,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
             rotatePlayer();
 
-            if (!isShooting && !isCollectingFruit)
+            if (!isShooting && !isCollectingFruit && !isUnderSpell)
             {
                 body.MovePosition(transform.position + movement * movingSpeed * Time.deltaTime);
 
@@ -279,9 +280,16 @@ public class PlayerController : MonoBehaviour
         isCollectingFruit = b;
     }
 
-    
+    public void setIsUnderSpell(bool b)
+    {
+        isUnderSpell = b;
+    }
 
- 
+    public bool getIsUnderSpell()
+    {
+        return isUnderSpell;
+    }
+
 
 }
 

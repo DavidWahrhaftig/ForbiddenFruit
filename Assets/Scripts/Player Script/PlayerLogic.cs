@@ -311,6 +311,17 @@ public class PlayerLogic : MonoBehaviour
         }
         
     }
+
+    public void activateScarecorwSpell()
+    {
+        Invoke("scarecrowSpell", 0.5f);
+    }
+
+    private void scarecrowSpell()
+    {
+        //playerController.setIsUnderSpell(true);   Moved to ScarecrowSpellBehaviour.cs
+        animator.SetTrigger("scarecrowSpell");
+    }
 }
 
 
