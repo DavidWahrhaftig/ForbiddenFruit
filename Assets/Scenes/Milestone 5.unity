@@ -403,6 +403,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3323800234274986716}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &35482341 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3595840261371538687, guid: 91bda12834efab645aa2271c99c2649e,
+    type: 3}
+  m_PrefabInstance: {fileID: 809303931764895202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &54448624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,6 +2101,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.1984792, y: 7.244383, z: 10.2487755}
   m_Center: {x: -1.5999403, y: 1.1214551, z: 10.172804}
+--- !u!20 &467031809 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1557158522463328804, guid: b3e2149d983777049bd70761979f2fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8048912335114303644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &467160142
 GameObject:
   m_ObjectHideFlags: 0
@@ -11214,6 +11226,11 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 2004765403}
+    - target: {fileID: 581382059666174653, guid: 91bda12834efab645aa2271c99c2649e,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 35482341}
     - target: {fileID: 809303931701224085, guid: 91bda12834efab645aa2271c99c2649e,
         type: 3}
       propertyPath: enemyPlayer
@@ -11840,6 +11857,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165845071189172195, guid: e8cd9851975daec4faa9b15bc37c1dc7,
+        type: 3}
+      propertyPath: allowVisibleCheck
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8cd9851975daec4faa9b15bc37c1dc7, type: 3}
 --- !u!1001 &7988786762375606128
@@ -12004,11 +12026,21 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 918683684}
+    - target: {fileID: 5251661053554194606, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 467031809}
     - target: {fileID: 7863011286820077000, guid: b3e2149d983777049bd70761979f2fc6,
         type: 3}
       propertyPath: enemyPlayer
       value: 
       objectReference: {fileID: 4488437635940417705}
+    - target: {fileID: 487822492144138163, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: m_Name
+      value: Camera2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3e2149d983777049bd70761979f2fc6, type: 3}
 --- !u!4 &9131257446618440460 stripped

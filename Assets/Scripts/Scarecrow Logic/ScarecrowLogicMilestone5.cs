@@ -19,33 +19,51 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     public float maxAudioDistance = 7f;
     private float initialVolume;
     private AudioSource audioSource;
-    private Transform lastPlayerEntered;
-    
+    private Transform player1, player2, lastPlayerEntered;
+
+    public bool allowVisibleCheck = false;
+
 
     private void Start()
     {
         //gameObject.SetActive(isActive);
         audioSource = GetComponent<AudioSource>();
         initialVolume = audioSource.volume;
+
+        player1 = FindObjectOfType<GameManager>().getPlayer(1);
+        player2 = FindObjectOfType<GameManager>().getPlayer(2);
     }
 
     private void Update()
     {
         if (getMinimumDistanceOfPlayer() < maxAudioDistance && !FindObjectOfType<GameManager>().isGameOver())
         {
-            audioSource.volume = initialVolume * (1f -  getMinimumDistanceOfPlayer()/maxAudioDistance);
-        } else
+            audioSource.volume = initialVolume * (1f - getMinimumDistanceOfPlayer() / maxAudioDistance);
+        }
+        else
         {
             audioSource.volume = 0f;
         }
+
+        checkVisibilitytoPlayers();
     }
 
-
+    private void checkVisibilitytoPlayers()
+    {
+        if (player1.GetComponent<PlayerLogic>().iCanSee(gameObject) && allowVisibleCheck)
+        {
+            Debug.Log("Player 1 can see me!");
+        }
+        else if (allowVisibleCheck)
+        {
+            Debug.Log(" --- Player 1 CANNOT see me! ---");
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Collision Tag: " + other.transform.tag);
-        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+        if (other.transform.tag == player1.tag || other.transform.tag == player2.tag)
         {
             lastPlayerEntered = other.transform; // incase both players enter the scarecrow radius
 
@@ -63,7 +81,7 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+        if (other.transform.tag == player1.tag || other.transform.tag == player2.tag)
         {
 
             direction = lastPlayerEntered.position - scarecrowRotation.position;
@@ -86,7 +104,7 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+        if (other.transform.tag == player1.tag || other.transform.tag == player2.tag)
         {
             scarecrowAnimator.SetTrigger("idle");
         }
@@ -101,9 +119,6 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     
     private float getMinimumDistanceOfPlayer()
     {
-        Transform player1 = FindObjectOfType<GameManager>().getPlayer(1);
-        Transform player2 = FindObjectOfType<GameManager>().getPlayer(2);
-
         return Mathf.Min(Vector3.Distance(player1.position, transform.position), Vector3.Distance(player2.position, transform.position));
     }
 

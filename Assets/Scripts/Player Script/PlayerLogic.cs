@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour
 {
     [SerializeField] Transform playerBase;
+    [SerializeField] Camera camera;
 
     public GameObject enemyProjectile;
 
@@ -322,6 +323,17 @@ public class PlayerLogic : MonoBehaviour
         //playerController.setIsUnderSpell(true);   Moved to ScarecrowSpellBehaviour.cs
         animator.SetTrigger("scarecrowSpell");
         playerController.getGamePadController().SetVibration(0, 0.5f, 3.0f, true);
+    }
+
+    public bool iCanSee(GameObject Object)
+    {
+        // Return true if object is in the camera view, even partially
+
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(camera);
+        if (GeometryUtility.TestPlanesAABB(planes, Object.GetComponent<Collider>().bounds))
+            return true;
+        else
+            return false;
     }
 }
 
