@@ -566,6 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bbf3a3639c973e48bf5d8afd8a62820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scarecrowSpell: {fileID: 8300000, guid: d47cd28d3b04416449d6fcdb49afaa9e, type: 3}
 --- !u!1101 &-1117349253006245734
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

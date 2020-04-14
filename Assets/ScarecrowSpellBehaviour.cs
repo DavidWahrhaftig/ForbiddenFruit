@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class ScarecrowSpellBehaviour : StateMachineBehaviour
 {
+    [SerializeField] AudioClip scarecrowSpell;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<PlayerController>().setIsUnderSpell(true);
+        PlayerController playerController = animator.GetComponent<PlayerController>();
+        PlayerLogic playerLogic = animator.GetComponent<PlayerLogic>();
+        playerController.setIsUnderSpell(true);
+        playerLogic.playSound(scarecrowSpell);
         //animator.SetBool("scarecrowSpellOn", false);
     }
 

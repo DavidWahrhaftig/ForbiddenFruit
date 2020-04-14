@@ -321,6 +321,7 @@ public class PlayerLogic : MonoBehaviour
     {
         //playerController.setIsUnderSpell(true);   Moved to ScarecrowSpellBehaviour.cs
         animator.SetTrigger("scarecrowSpell");
+        playerController.getGamePadController().SetVibration(0, 0.5f, 3.0f, true);
     }
 }
 
