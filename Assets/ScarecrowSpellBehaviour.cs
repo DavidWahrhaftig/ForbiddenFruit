@@ -11,6 +11,7 @@ public class ScarecrowSpellBehaviour : StateMachineBehaviour
         PlayerController playerController = animator.GetComponent<PlayerController>();
         PlayerLogic playerLogic = animator.GetComponent<PlayerLogic>();
         playerController.setIsUnderSpell(true);
+        animator.GetComponent<AudioSource>().Stop();
         playerLogic.playSound(scarecrowSpell);
         //animator.SetBool("scarecrowSpellOn", false);
     }
