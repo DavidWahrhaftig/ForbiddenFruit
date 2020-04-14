@@ -16,6 +16,7 @@ public class SpecialFruit : MonoBehaviour
 
     [SerializeField] float spellDuration = 5f; // how long a fruit will be under a spell before becoming neutral again
     [SerializeField] float respawnTime = 5f;
+    [SerializeField] float collectTime = 0.1f;
     [SerializeField] float respawnDistance = 15f;
 
     GameObject currentActiveFruit;
@@ -55,11 +56,11 @@ public class SpecialFruit : MonoBehaviour
                     other.gameObject.GetComponent<PlayerLogic>().incrementFruitCounter();
                     playFruitSound();
 
-                    
-                    currentActiveFruit.SetActive(false);
+                    //Invoke("setFruitInactive", collectTime);
+                    setFruitInactive();
 
                     Invoke("respawnFruit", respawnTime);
-                    
+
                 }
 
             }
@@ -71,6 +72,11 @@ public class SpecialFruit : MonoBehaviour
         }
     }
 
+    private void setFruitInactive()
+    {
+        currentActiveFruit.SetActive(false);
+        //Invoke("respawnFruit", respawnTime);
+    }
 
     private bool canPlyerTakeFruit(string playerTag)
     {

@@ -15,11 +15,26 @@ public class TutorialManager : MonoBehaviour
     public Transform player2;
     public Transform witch;
 
+    private Rewired.Player playerController1, playerController2;
+
+    private float originalJumpForce;
+
+    /** confirmation flags **/
+    bool vertical1, vertical2 = false;
+    bool horizontal1, horizontal2 = false;
+    bool rotate1, rotate2 = false;
+    bool jump1, jump2 = false;
 
     private void Start()
     {
-        //player1.jumpForce = 0;
-        //player2.jumpForce = 0;
+
+        playerController1 = player1.GetComponent<PlayerController>().getGamePadController();
+        playerController2 = player2.GetComponent<PlayerController>().getGamePadController();
+
+        // don't allow player to jump
+        originalJumpForce = player1.GetComponent<PlayerController>().jumpForce;
+        player1.GetComponent<PlayerController>().jumpForce = 0f;
+        player2.GetComponent<PlayerController>().jumpForce = 0f;
     }
     void Update()
     {
@@ -37,20 +52,50 @@ public class TutorialManager : MonoBehaviour
 
 
         }
-        if (popUpIndex == 0) /**move**/
+
+        switch (popUpIndex)
+        {
+            case 0: // move vertically
+
+                vertical1 = Mathf.Abs(playerController1.GetAxis("Move Vertical")) > 0f;
+                //checkPlayerVerticalMove(playerController1.GetButtonDown("Move Vertical"), isForward1);
+
+                break;
+            case 1: // move horizonally
+
+                break;
+            case 2: // rotate left
+
+                break;
+            case 3: // rotate right
+
+                break;
+            case 4: // jump
+                player1.GetComponent<PlayerController>().jumpForce = originalJumpForce;
+                player2.GetComponent<PlayerController>().jumpForce = originalJumpForce;
+
+                break;
+            case 5: // collect fruit
+
+                break;
+            case 6: // shoot light ball
+
+                break;
+        }
+
+
+        if (popUpIndex == 0) /** move forward / back **/
         {
             bool player1Moved = false;
             bool player2Moved = false;
 
             if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Move Vertical"))
             {
-                //player1.jumpForce = ???
                 player1Moved = true;
             }
 
             if (player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Move Vertical"))
             {
-                //player2.jumpForce = ??
                 player2Moved = true;
             }
 
@@ -153,5 +198,13 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
+    }
+
+    private void checkPlayerVerticalMove(bool condition, bool confirm)
+    {
+        if (condition)
+        {
+            confirm = true;
+        }
     }
 }

@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private PlayerLogic playerLogic;
     private Animator animator;
     bool isLevitating = false;
+    bool isCollectingFruit = false;
     #endregion
 
     #region Controller Inputs
@@ -123,7 +124,7 @@ public class PlayerController : MonoBehaviour
 
             rotatePlayer();
 
-            if (!isShooting)
+            if (!isShooting && !isCollectingFruit)
             {
                 body.MovePosition(transform.position + movement * movingSpeed * Time.deltaTime);
 
@@ -273,6 +274,10 @@ public class PlayerController : MonoBehaviour
         isLevitating = b;
     }
 
+    public void setIsCollectingFruit(bool b)
+    {
+        isCollectingFruit = b;
+    }
 
     
 
