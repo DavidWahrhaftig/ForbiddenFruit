@@ -32,6 +32,7 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
 
         player1 = FindObjectOfType<GameManager>().getPlayer(1);
         player2 = FindObjectOfType<GameManager>().getPlayer(2);
+        //GetComponent<Renderer>().enabled = false;
     }
 
     private void Update()
@@ -50,7 +51,8 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
 
     private void checkVisibilitytoPlayers()
     {
-        if (player1.GetComponent<PlayerLogic>().iCanSee(gameObject) && allowVisibleCheck)
+        //if (player1.GetComponent<PlayerLogic>().iCanSee(gameObject) && allowVisibleCheck)
+        if (player1.GetComponent<PlayerLogic>().isVisibleByCamera(gameObject) && allowVisibleCheck)
         {
             Debug.Log("Player 1 can see me!");
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -8,6 +9,9 @@ public class MainMenu : MonoBehaviour
 
     public Animator gateAnimator;
     public Transform camera;
+    public GameObject optionsMenu;
+
+    public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton; 
 
     private SceneChanger sceneChanger;
     private int nextSceneIndex = 0;
@@ -17,6 +21,10 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         sceneChanger = FindObjectOfType<SceneChanger>();
+        optionsMenu.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(mainFirstButton);
     }
     private void Update()
     {
@@ -52,6 +60,24 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void openOptionsMenu()
+    {
+        optionsMenu.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(optionsFirstButton);
+        
+    }
+
+    public void closeOptionsMenu()
+    {
+        optionsMenu.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(mainFirstButton);
+        
     }
 
 }

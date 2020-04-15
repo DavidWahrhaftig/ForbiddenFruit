@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerLogic : MonoBehaviour
 {
+
+    public float fieldOfViewX = 1f;
     [SerializeField] Transform playerBase;
     [SerializeField] Camera camera;
 
@@ -335,6 +337,15 @@ public class PlayerLogic : MonoBehaviour
         else
             return false;
     }
+
+    public bool isVisibleByCamera(GameObject obj)
+    {
+        Vector3 screenPoint = camera.WorldToViewportPoint(obj.transform.position);
+        bool onScreen = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < fieldOfViewX;
+        
+        return onScreen;
+    }
+    
 }
 
 
