@@ -10,8 +10,10 @@ public class MainMenu : MonoBehaviour
     public Animator gateAnimator;
     public Transform camera;
     public GameObject optionsMenu;
+    public GameObject creditsDisplay;
 
-    public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton; 
+    
+    public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton, creditsCloseButton; 
 
     private SceneChanger sceneChanger;
     private int nextSceneIndex = 0;
@@ -22,6 +24,7 @@ public class MainMenu : MonoBehaviour
     {
         sceneChanger = FindObjectOfType<SceneChanger>();
         optionsMenu.SetActive(false);
+        creditsDisplay.SetActive(false);
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainFirstButton);
@@ -78,6 +81,21 @@ public class MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainFirstButton);
         
+    }
+
+    public void openCredits()
+    {
+        creditsDisplay.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(creditsCloseButton);
+    }
+
+    public void closeCredits() {
+        creditsDisplay.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(mainFirstButton);
     }
 
 }
