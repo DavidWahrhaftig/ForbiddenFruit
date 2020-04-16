@@ -145,6 +145,8 @@ public class GameOptions : MonoBehaviour
 
     static public void unmuteBackgroundMusic()
     {
+        // for menu only 
+
         GameObject[] backgroundMusic = GameObject.FindGameObjectsWithTag("BG Sound");
 
         for (int i = 0; i < backgroundMusic.Length; i++)
@@ -167,6 +169,7 @@ public class GameOptions : MonoBehaviour
 
     static public void unmuteSoundFX()
     {
+        // for main menu only
         GameObject[] soundFX = GameObject.FindGameObjectsWithTag("Sound FX");
 
         for (int i = 0; i < soundFX.Length; i++)

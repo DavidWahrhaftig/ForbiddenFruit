@@ -36,7 +36,7 @@ public class ChaseBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        if (!animator.GetComponent<AudioSource>().isPlaying && !hasPlayedSound)
+        if (!witchLogic.audioSource.isPlaying && !hasPlayedSound)
         {
             hasPlayedSound = true;
             playChasingSound(targetPlayer.tag);
