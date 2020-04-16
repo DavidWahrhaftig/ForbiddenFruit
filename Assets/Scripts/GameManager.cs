@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
 
     [Header("Time Settings")]
-    public float gameDuration = 60;
+    private float gameDuration;
     public float restartDelay = 1f;
     public float countDownDuration = 7.0f;
 
@@ -57,13 +57,19 @@ public class GameManager : MonoBehaviour
 
     private bool flippedCameraEnd = false;
 
+    private GameOptions gameOptions;
+
     void Awake()
     {
 
         restartPrompt.SetActive(false);
         //restartPrompt.GetComponent<Image>().material.color.a = 0f;
 
+        gameOptions = FindObjectOfType<GameOptions>();
+
+        gameDuration = gameOptions.getGameDuration();
         remainingTime = gameDuration;
+        
         remainingCountDownTime = countDownDuration;
 
         // set initial game UI
