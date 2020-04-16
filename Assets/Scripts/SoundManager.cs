@@ -25,6 +25,8 @@ public class SoundManager : MonoBehaviour
     {
         gameManager = GetComponent<GameManager>();
         audioSource = GetComponent<AudioSource>();
+
+        //turnSelectedSoundsOn();
     }
 
     // Update is called once per frame
@@ -95,4 +97,5 @@ public class SoundManager : MonoBehaviour
     {
         merlinAudio.PlayOneShot(merlinTieGame);
     }
+
 }
