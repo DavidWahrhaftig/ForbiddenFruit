@@ -1609,6 +1609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 504275198}
   - component: {fileID: 504275199}
+  - component: {fileID: 504275200}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1655,10 +1656,23 @@ MonoBehaviour:
   camera: {fileID: 423272372}
   optionsMenu: {fileID: 1827044861}
   creditsDisplay: {fileID: 1154321607}
+  timeDurationText: {fileID: 2117844206}
   mainFirstButton: {fileID: 843887873}
   optionsFirstButton: {fileID: 1517559121}
   optionsClosedButton: {fileID: 1160565362}
   creditsCloseButton: {fileID: 54369007}
+--- !u!114 &504275200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504275197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf9773ab015202448c157de3d7c564f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &510194963
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,7 +3435,7 @@ RectTransform:
   m_GameObject: {fileID: 999285911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0400189, y: 1.0400189, z: 1.0400189}
+  m_LocalScale: {x: 0.9464172, y: 0.9464172, z: 0.9464172}
   m_Children: []
   m_Father: {fileID: 1827044862}
   m_RootOrder: 3
@@ -3846,7 +3860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1154321608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4521,7 +4535,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1325440843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 504275200}
+        m_MethodName: increaseGameDuration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1325440843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4903,7 +4928,7 @@ RectTransform:
   m_GameObject: {fileID: 1480481417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0400189, y: 1.0400189, z: 1.0400189}
+  m_LocalScale: {x: 0.9464172, y: 0.9464172, z: 0.9464172}
   m_Children: []
   m_Father: {fileID: 1827044862}
   m_RootOrder: 5
@@ -5246,7 +5271,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1517559124}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 504275200}
+        m_MethodName: decreaseGameDuration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1517559124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5638,7 +5674,7 @@ RectTransform:
   m_GameObject: {fileID: 1686028859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0400189, y: 1.0400189, z: 1.0400189}
+  m_LocalScale: {x: 0.9464172, y: 0.9464172, z: 0.9464172}
   m_Children: []
   m_Father: {fileID: 1827044862}
   m_RootOrder: 6
@@ -6255,7 +6291,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 504275200}
+        m_MethodName: toggleSoundFx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!4 &1792190428 stripped
 Transform:
@@ -6447,7 +6494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1827044862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6865,7 +6912,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 504275200}
+        m_MethodName: toggletMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!224 &1952890375
 RectTransform:
@@ -7405,7 +7463,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039080803}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -8021,7 +8079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 87.6, y: -6.099983}
+  m_AnchoredPosition: {x: 78, y: -6.099983}
   m_SizeDelta: {x: 73.2, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2117844206
@@ -8079,7 +8137,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 513
-  m_characterSpacing: 0
+  m_characterSpacing: 7.24
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

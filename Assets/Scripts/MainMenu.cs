@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -12,22 +13,25 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject creditsDisplay;
 
-    
+    public TextMeshProUGUI timeDurationText;
     public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton, creditsCloseButton; 
 
     private SceneChanger sceneChanger;
     private int nextSceneIndex = 0;
-
     private bool moveCamera = false;
+
+    private GameOptions gameOptions;
 
     private void Start()
     {
+        gameOptions = FindObjectOfType<GameOptions>();
         sceneChanger = FindObjectOfType<SceneChanger>();
         optionsMenu.SetActive(false);
         creditsDisplay.SetActive(false);
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainFirstButton);
+
     }
     private void Update()
     {
@@ -37,6 +41,9 @@ public class MainMenu : MonoBehaviour
             camera.transform.Translate(transform.forward * 0.08f, Space.World);
             sceneChanger.goToScene(nextSceneIndex, true);            
         }
+
+        // set value of game duration
+        setTimeDurationText();
     }
 
     private void transitionAnimation()
@@ -96,6 +103,15 @@ public class MainMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainFirstButton);
+    }
+
+    private void setTimeDurationText()
+    {
+
+        string minutes = ((int) gameOptions.getGameDuration() / 60).ToString();
+        string seconds = (gameOptions.getGameDuration() % 60).ToString("f0");
+        if (seconds == "0") { seconds = "00"; }
+        timeDurationText.text = minutes + ":" + seconds;
     }
 
 }
