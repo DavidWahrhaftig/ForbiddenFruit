@@ -1673,6 +1673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf9773ab015202448c157de3d7c564f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicToggle: {fileID: 1952890374}
+  soundFXToggle: {fileID: 1774015806}
 --- !u!1 &510194963
 GameObject:
   m_ObjectHideFlags: 0

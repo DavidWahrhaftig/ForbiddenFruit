@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3323800234281984305
+--- !u!1 &292403370378910754
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,63 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3323800234281984300}
-  - component: {fileID: 3323800234281984307}
-  - component: {fileID: 3323800234281984306}
-  - component: {fileID: 3323800234281984301}
-  - component: {fileID: 2884263363213449590}
+  - component: {fileID: 5044009666713314111}
+  - component: {fileID: 4536160284167702670}
   m_Layer: 0
-  m_Name: Special Fruit
-  m_TagString: SpecialFruit
+  m_Name: Audio Source
+  m_TagString: Sound FX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3323800234281984300
+--- !u!4 &5044009666713314111
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3323800234281984305}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.5, y: 0.55, z: 0.358}
+  m_GameObject: {fileID: 292403370378910754}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8557397555363506661}
-  - {fileID: 3714351024730944280}
-  - {fileID: 3824328064187767}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 3323800234281984300}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3323800234281984307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3323800234281984305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c403eee8df7fd12428d0d874929b79a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnable: 1
-  neutralFruit: {fileID: 4655211716272593910}
-  redFruit: {fileID: 420909866843160843}
-  blueFruit: {fileID: 3915545539308146532}
-  fruitSounds:
-  - {fileID: 8300000, guid: c8272d894e4674447a4e869f33c5de0b, type: 3}
-  spellDuration: 5
-  respawnTime: 5
-  respawnDistance: 15
---- !u!82 &3323800234281984306
+--- !u!82 &4536160284167702670
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3323800234281984305}
+  m_GameObject: {fileID: 292403370378910754}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -154,6 +127,66 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &3323800234281984305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3323800234281984300}
+  - component: {fileID: 3323800234281984307}
+  - component: {fileID: 3323800234281984301}
+  - component: {fileID: 2884263363213449590}
+  m_Layer: 0
+  m_Name: Special Fruit
+  m_TagString: SpecialFruit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3323800234281984300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323800234281984305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.5, y: 0.55, z: 0.358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8557397555363506661}
+  - {fileID: 3714351024730944280}
+  - {fileID: 3824328064187767}
+  - {fileID: 5044009666713314111}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3323800234281984307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323800234281984305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c403eee8df7fd12428d0d874929b79a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnable: 1
+  neutralFruit: {fileID: 4655211716272593910}
+  redFruit: {fileID: 420909866843160843}
+  blueFruit: {fileID: 3915545539308146532}
+  fruitSounds:
+  - {fileID: 8300000, guid: c8272d894e4674447a4e869f33c5de0b, type: 3}
+  spellDuration: 5
+  respawnTime: 5
+  collectTime: 0.1
+  respawnDistance: 15
+  audioSource: {fileID: 4536160284167702670}
 --- !u!135 &3323800234281984301
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -189,6 +222,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3323800234281984300}
     m_Modifications:
+    - target: {fileID: 4133063018449834674, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Fruit
+      objectReference: {fileID: 0}
     - target: {fileID: 1081091725140123809, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -243,11 +281,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133063018449834674, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Fruit
       objectReference: {fileID: 0}
     - target: {fileID: 5444941700389869447, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
         type: 3}

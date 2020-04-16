@@ -6,6 +6,7 @@ public class TorchPair : MonoBehaviour
 {
     // Start is called before the first frame update
 
+
     public Torch[] torches = new Torch[2];
 
     public void turnTorchesBlue()

@@ -23,10 +23,20 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
+
+
         gameManager = GetComponent<GameManager>();
         audioSource = GetComponent<AudioSource>();
 
-        //turnSelectedSoundsOn();
+        if (! GameOptions.isMusicOn())
+        {
+            GameOptions.muteBackgroundMusic();
+        }
+
+        if (! GameOptions.isSoundFxOn())
+        {
+            GameOptions.muteSoundFX();
+        }
     }
 
     // Update is called once per frame

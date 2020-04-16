@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOptions : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public Toggle musicToggle, soundFXToggle;
 
     static bool musicOn = true;
     static bool soundFxOn = true;
@@ -13,15 +16,43 @@ public class GameOptions : MonoBehaviour
     private int lowerLimit = 120;
     private int upperLimit = 300;
 
-    private void Update()
+    private void Start()
     {
-        //turnSelectedSoundsOn();
+        if(Debug.isDebugBuild)
+        {
+            lowerLimit = 0;
+        }
+
+        if (musicToggle && soundFXToggle) // for main Menu Only
+        {
+
+            musicToggle.isOn = musicOn;
+            soundFXToggle.isOn = soundFxOn;
+            if (! musicOn) // for main menu only
+            {
+                muteBackgroundMusic();
+            }
+            else
+            {
+                unmuteBackgroundMusic();
+            }
+
+            if (! soundFxOn) // for main menu only
+            {
+                muteSoundFX();
+            }
+            else
+            {
+                unmuteSoundFX();
+            }
+        }
     }
 
 
     public void toggleMusic()
     {
-        musicOn = !musicOn;
+        //musicOn = !musicOn;
+        musicOn = musicToggle.isOn;
         Debug.Log(musicOn);
 
         if (! musicOn) // for main menu only
@@ -33,12 +64,22 @@ public class GameOptions : MonoBehaviour
             unmuteBackgroundMusic();
         }
 
-        
+        if (!soundFxOn) // for main menu only
+        {
+            muteSoundFX();
+        }
+        else
+        {
+            unmuteSoundFX();
+        }
+
+
     }
 
     public void toggleSoundFx()
     {
-        soundFxOn = !soundFxOn;
+        //soundFxOn = !soundFxOn;
+        soundFxOn = soundFXToggle.isOn;
         Debug.Log(soundFxOn);
 
         if (!soundFxOn) // for main menu only
@@ -78,17 +119,17 @@ public class GameOptions : MonoBehaviour
         return gameDuration;
     }
 
-    public bool isMusicOn()
+    static public bool isMusicOn()
     {
         return musicOn;
     }
 
-    public bool isSoundFxOn()
+    static public bool isSoundFxOn()
     {
         return soundFxOn;
     }
 
-    public void muteBackgroundMusic()
+    static public void muteBackgroundMusic()
     {
         // mute all sounds
         // unmute sound fx
@@ -102,7 +143,7 @@ public class GameOptions : MonoBehaviour
         }
     }
 
-    public void unmuteBackgroundMusic()
+    static public void unmuteBackgroundMusic()
     {
         GameObject[] backgroundMusic = GameObject.FindGameObjectsWithTag("BG Sound");
 
@@ -113,7 +154,7 @@ public class GameOptions : MonoBehaviour
         }
     }
 
-    public void muteSoundFX()
+    static public void muteSoundFX()
     {
         GameObject[] soundFX = GameObject.FindGameObjectsWithTag("Sound FX");
 
@@ -124,7 +165,7 @@ public class GameOptions : MonoBehaviour
         }
     }
 
-    public void unmuteSoundFX()
+    static public void unmuteSoundFX()
     {
         GameObject[] soundFX = GameObject.FindGameObjectsWithTag("Sound FX");
 

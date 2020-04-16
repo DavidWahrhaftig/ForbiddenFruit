@@ -10,7 +10,7 @@ public class FruitLossProp : MonoBehaviour
     [SerializeField] Collider collider;
     [SerializeField] AudioClip collectSound;
     //[SerializeField] AudioClip loseFruitSound;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     private GameObject forbiddenPlayer;
     private bool collectable = false;
@@ -18,7 +18,12 @@ public class FruitLossProp : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+
+        if (!GameOptions.isSoundFxOn())
+        {
+            audioSource.volume = 0f;
+        }
+
         //Physics.IgnoreCollision(GetComponent<Collider>(), this.player.GetComponent<Collider>());
         Invoke("dissolveFruit", destoryTimer);
     }

@@ -15,10 +15,11 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     [Range(0, 1)] public float rotationSpeed = 0.1f;
     private Vector3 direction;
 
+    public AudioSource audioSource;
     private float fruitSnatchTimer = 0f;
     public float maxAudioDistance = 7f;
     private float initialVolume;
-    private AudioSource audioSource;
+
     private Transform player1, player2, lastPlayerEntered;
 
     public bool allowVisibleCheck = false;
@@ -27,7 +28,7 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     private void Start()
     {
         //gameObject.SetActive(isActive);
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         initialVolume = audioSource.volume;
 
         player1 = FindObjectOfType<GameManager>().getPlayer(1);

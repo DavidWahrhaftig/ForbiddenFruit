@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool grounded = true; // flag
 
     [Header("Sound Settings")]
+    public AudioSource audioSource;
     public AudioClip walkingSound;
     public AudioClip jumpSound;
 
@@ -33,7 +34,6 @@ public class PlayerController : MonoBehaviour
     */
 
     #region Private Fields
-    private AudioSource audioSource;
     
     private float defaultY;
     private Rigidbody body;
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         playerLogic = GetComponent<PlayerLogic>();
         body = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         #endregion 
         movingSpeed = walkingSpeed;
 

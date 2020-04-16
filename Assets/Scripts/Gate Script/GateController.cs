@@ -10,7 +10,7 @@ public class GateController : MonoBehaviour
     [SerializeField] AudioClip openSound, closeSound;
     [SerializeField] float waitToCloseDuration = 1.5f;
     private Animator animator;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     bool isOpen = false;
 
@@ -18,7 +18,7 @@ public class GateController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

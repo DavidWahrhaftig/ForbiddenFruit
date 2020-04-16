@@ -18,7 +18,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
     private Vector3 direction;
     private string playerTargetTag;
     private bool isPlayerInProximity;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip hitSound;
 
     public float maxAudioDistance = 5f;
@@ -28,7 +28,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
         //Debug.Log("NavMesh Registered");
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         animator = this.GetComponent<Animator>();
-        audioSource = this.GetComponent<AudioSource>();
+        //audioSource = this.GetComponent<AudioSource>();
         initialVolume = audioSource.volume;
     }
 

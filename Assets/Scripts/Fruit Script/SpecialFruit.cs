@@ -20,14 +20,14 @@ public class SpecialFruit : MonoBehaviour
     [SerializeField] float respawnDistance = 15f;
 
     GameObject currentActiveFruit;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private bool isUnderSpell = false;
     private bool isCollectable = true;
 
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         audioSource.pitch = Random.Range(0.9f, 1.1f);
 
         redFruit.SetActive(false);

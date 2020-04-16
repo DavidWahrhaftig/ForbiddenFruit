@@ -7,6 +7,8 @@ public class Torch : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] ParticleSystem greenFire, redFire, blueFire;
 
+    //public AudioSource audioSource;
+
     private ParticleSystem currentFlame;
     void Start()
     {
@@ -23,7 +25,7 @@ public class Torch : MonoBehaviour
         currentFlame.gameObject.SetActive(false);
         currentFlame = redFire;
         currentFlame.gameObject.SetActive(true);
-        GetComponent<AudioSource>().Play();
+        //audioSource.Play();
     }
 
     public void makeFlameBlue()
@@ -31,7 +33,7 @@ public class Torch : MonoBehaviour
         currentFlame.gameObject.SetActive(false);
         currentFlame = blueFire;
         currentFlame.gameObject.SetActive(true);
-        GetComponent<AudioSource>().Play();
+        //audioSource.Play();
     }
 
 }

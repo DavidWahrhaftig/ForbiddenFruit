@@ -60,7 +60,7 @@ public class CaptureBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         // play laughing sound only when she hasn't laughed before and no other phrase is playing
-        if (!animator.GetComponent<AudioSource>().isPlaying && !hasPlayedSound)
+        if (!animator.GetComponent<WitchLogic>().audioSource.isPlaying && !hasPlayedSound)
         {
             hasPlayedSound = true;
             witchLogic.playSound(witchLogic.laughSound);

@@ -12,6 +12,7 @@ public class PlayerLogic : MonoBehaviour
 
     public GameObject enemyProjectile;
 
+    public AudioSource audioSource;
     public AudioClip hitSound, caughtSound;
 
     public TextMeshProUGUI counterUI;
@@ -19,8 +20,6 @@ public class PlayerLogic : MonoBehaviour
 
     [SerializeField] SkinnedMeshRenderer playerSkin;
     [SerializeField] Material glowMaterial;
-
-    private AudioSource audioSource;
 
     private Rigidbody selfRigidbody;
     public int fruitCounter = 0;
@@ -49,7 +48,7 @@ public class PlayerLogic : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         selfRigidbody = GetComponent<Rigidbody>();
 
         ogMaterial = playerSkin.material;

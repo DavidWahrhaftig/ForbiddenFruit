@@ -7,13 +7,13 @@ public class NewGateScript : MonoBehaviour
     // Start is called before the first frame update
 
 
-
+    public AudioSource audioSource;
     [SerializeField] GameObject gateBlock;
 
     [SerializeField] AudioClip openSound, closeSound;
     [SerializeField] float closingDistance = 5f;
 
-    AudioSource audioSource;
+    
 
     bool isGateOpen = false;
     bool isGateClosing = false;
@@ -26,7 +26,7 @@ public class NewGateScript : MonoBehaviour
     void Start()
     {
         gateBlock.SetActive(false);
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         player1 = FindObjectOfType<GameManager>().getPlayer(1);
         player2 = FindObjectOfType<GameManager>().getPlayer(2);
     }

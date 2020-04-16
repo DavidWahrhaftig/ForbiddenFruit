@@ -12,6 +12,8 @@ public class WitchLogic : MonoBehaviour
 
     public Transform targetPlayer = null;
 
+    public AudioSource audioSource;
+
     public AudioClip laughSound;
     public AudioClip chasingSound;
     public AudioClip patrollingSound;
@@ -21,11 +23,11 @@ public class WitchLogic : MonoBehaviour
     public float welcomeDelay = 3f;
 
     private Animator witchAnimator;
-    private AudioSource audioSource;
+    
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         witchAnimator = GetComponent<Animator>();
     }
 
