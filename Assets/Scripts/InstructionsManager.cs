@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,6 +9,8 @@ using UnityEngine.UI;
 public class InstructionsManager : MonoBehaviour
 {
     [SerializeField] Rewired.Player gamePadController1, gamePadController2;
+
+    [SerializeField] TextMeshProUGUI gameDruationUI;
 
     [SerializeField] Animator fadeOut;
     [SerializeField] AudioSource sound;
@@ -31,6 +35,20 @@ public class InstructionsManager : MonoBehaviour
         {
             FindObjectOfType<GameOptions>().muteSoundFX();
         }
+
+        float duration = GameOptions.gameDuration;
+        string minutes = (Math.Floor(duration / 60)).ToString();
+        string seconds = (duration % 60).ToString("f0");
+
+        if (seconds == "0")
+        {
+            seconds = "00";
+            //minutes = "1";//((int)Math.Ceiling(duration) / 60).ToString();
+        }
+
+        gameDruationUI.text = "Game Duration:  " + minutes + ":" + seconds;
+
+
     }
 
     // Update is called once per frame

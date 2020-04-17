@@ -11,7 +11,7 @@ public class GameOptions : MonoBehaviour
 
     static bool musicOn = true;
     static bool soundFxOn = true;
-    static int gameDuration = 210; // in seconds (multiple of 30 only)
+    static public int gameDuration = 210; // in seconds (multiple of 30 only)
 
     private int lowerLimit = 120;
     private int upperLimit = 300;
