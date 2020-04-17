@@ -5,40 +5,50 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    [SerializeField] float sceneSwitchTime = 2.3f;
 
-    private bool changeScene = false;
-    private int sceneIndex = 0;
-    private Animator animator;
+    // Scene Indexes 
+    static public int MENU = 0;
+    static public int INSTRUCTIONS = 1;
+    static public int GAME = 2;
+    static public int QUIT = 3;
+
+    static public int sceneIndexSelected;
+
+
+    //private bool changeScene = false;
+    //private int sceneIndex = 0;
+    //private Animator animator;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
-    public void goToScene(int nextSceneIndex, bool withFadeOut)
+    public void loadNextScene()
     {
-        //changeScene = true;
-        sceneIndex = nextSceneIndex;
-        if (withFadeOut)
+        if (sceneIndexSelected == QUIT)
         {
-            animator.SetTrigger("FadeOut");
-            Invoke("nextScene", sceneSwitchTime);
+            QuitGame();
         }
         else
         {
-            nextScene();
+            SceneManager.LoadScene(sceneIndexSelected);
         }
+    }   
+
+    /* ------------------------------  */
+    static public void setSceneIndexSelected(int flag)
+    {
+        
+        sceneIndexSelected = flag;
+        Debug.Log(sceneIndexSelected);
     }
 
-    private void nextScene()
+    private void QuitGame()
     {
-        SceneManager.LoadScene(sceneIndex);
-    }   
+        Application.Quit();
+    }
+
+
 }

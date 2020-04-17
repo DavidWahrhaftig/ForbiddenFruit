@@ -14,8 +14,6 @@ public class InstructionsManager : MonoBehaviour
 
     [Range(0, 1)] [SerializeField] float checkTransparency = 0.3f;
 
-    private SceneChanger sceneChanger;
-
     bool isReady = false;
     
     // Start is called before the first frame update
@@ -23,8 +21,6 @@ public class InstructionsManager : MonoBehaviour
     {
         gamePadController1 = Rewired.ReInput.players.GetPlayer(0);
         gamePadController2 = Rewired.ReInput.players.GetPlayer(1);
-
-        sceneChanger = GameObject.FindObjectOfType<SceneChanger>();
     }
 
     // Update is called once per frame
@@ -47,14 +43,16 @@ public class InstructionsManager : MonoBehaviour
             toggleConfirmation(check2, null, true); // visual check for player 2
             IEnumerator fadeSound = AudioFadeOut.FadeOut(sound, 2.0f);
             StartCoroutine(fadeSound);
-            sceneChanger.goToScene(2, true);
+            SceneChanger.setSceneIndexSelected(SceneChanger.GAME);
+            FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
 
         }
         
         // Go Back To Main Menu Scene
         if (gamePadController1.GetButtonDown("Camera Flip") || gamePadController2.GetButtonDown("Camera Flip"))
         {
-            sceneChanger.goToScene(0, true);
+            SceneChanger.setSceneIndexSelected(SceneChanger.MENU);
+            FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
         }
             
     }

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using Rewired;
 public class PlayerController : MonoBehaviour
 {
+    static public bool pauseCheck = false;
+
     [Header("Game Pad Controller Settings")]
     public int gamePadID;
     [SerializeField] Rewired.Player gamePadController;
@@ -115,8 +117,9 @@ public class PlayerController : MonoBehaviour
         {
             levitate();
         }
-
-        if (!playerLogic.isDisabled())
+        
+        // only allow controls when the player isn't disabled and the game isn't paused
+        if (! playerLogic.isDisabled() && ! pauseCheck)
         {
 
             // horizontal rotation movement

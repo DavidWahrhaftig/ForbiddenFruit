@@ -39,7 +39,6 @@ public class MainMenu : MonoBehaviour
         if (moveCamera)
         {
             camera.transform.Translate(transform.forward * 0.08f, Space.World);
-            sceneChanger.goToScene(nextSceneIndex, true);            
         }
 
         // set value of game duration
@@ -54,22 +53,26 @@ public class MainMenu : MonoBehaviour
         moveCamera = true;
     }
 
-    public void PlayGameWithEntrance()
+    public void PlayGame()
     {
-        nextSceneIndex = 1;
+        SceneChanger.setSceneIndexSelected(SceneChanger.INSTRUCTIONS);
+        FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
         transitionAnimation();
     }
 
-
+    /*
     public void CreditsWithEntrance()
     {
-        nextSceneIndex = 3;  
-        transitionAnimation();
+        //SceneChanger.setSceneIndexSelected(SceneChanger.CREDITS);
+        //FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
+        //transitionAnimation();
     }
+    */
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneChanger.setSceneIndexSelected(SceneChanger.QUIT);
+        FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
     }
 
     public void openOptionsMenu()

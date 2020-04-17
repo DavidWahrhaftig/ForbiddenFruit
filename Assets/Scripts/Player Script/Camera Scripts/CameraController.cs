@@ -26,48 +26,53 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gamePadController = GetComponentInParent<PlayerController>().getGamePadController();
 
-        lookVertical = gamePadController.GetAxis("Look Vertical");
-        cameraFlip = gamePadController.GetButton("Camera Flip");
-        rotationFactor = rotationSpeed * lookVertical * Time.deltaTime;
-
-        //Debug.Log("camera.rotaiton.x = " + transform.localRotation.x);
-
-        if (!isFlipped) { 
-            if (overUpperBound() || underLowerBound() || transform.localRotation.x < upperBound && transform.localRotation.x > lowerBound)
-            {
-                transform.Rotate(rotationFactor, 0, 0, Space.Self); // camera vertical rotation
-            }
-        }
-
-
-        if (cameraFlip) // pressed on flip button
+        if( ! PauseMenu.isGamePaused)
         {
-            
+            gamePadController = GetComponentInParent<PlayerController>().getGamePadController();
+
+            lookVertical = gamePadController.GetAxis("Look Vertical");
+            cameraFlip = gamePadController.GetButton("Camera Flip");
+            rotationFactor = rotationSpeed * lookVertical * Time.deltaTime;
+
+            //Debug.Log("camera.rotaiton.x = " + transform.localRotation.x);
+
             if (!isFlipped)
             {
-                isFlipped = true;
-                // move camera in front/back of player
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z * -1f);
-
-                // flip camera
-                transform.Rotate(0f, 180, 0f, Space.World);
+                if (overUpperBound() || underLowerBound() || transform.localRotation.x < upperBound && transform.localRotation.x > lowerBound)
+                {
+                    transform.Rotate(rotationFactor, 0, 0, Space.Self); // camera vertical rotation
+                }
             }
-            
-            
-            // inverse the horizontal movment and horizontal rotation in PlayerController.cs
-        }
-        else // rlease of flip button
-        {
-            if (isFlipped)
-            {
-                isFlipped = false;
-                // move camera in front/back of player
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z * -1f);
 
-                // flip camera
-                transform.Rotate(0f, -180, 0f, Space.World);
+
+            if (cameraFlip) // pressed on flip button
+            {
+
+                if (!isFlipped)
+                {
+                    isFlipped = true;
+                    // move camera in front/back of player
+                    transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z * -1f);
+
+                    // flip camera
+                    transform.Rotate(0f, 180, 0f, Space.World);
+                }
+
+
+                // inverse the horizontal movment and horizontal rotation in PlayerController.cs
+            }
+            else // rlease of flip button
+            {
+                if (isFlipped)
+                {
+                    isFlipped = false;
+                    // move camera in front/back of player
+                    transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z * -1f);
+
+                    // flip camera
+                    transform.Rotate(0f, -180, 0f, Space.World);
+                }
             }
         }
     }
