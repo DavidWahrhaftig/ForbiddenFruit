@@ -21,6 +21,16 @@ public class InstructionsManager : MonoBehaviour
     {
         gamePadController1 = Rewired.ReInput.players.GetPlayer(0);
         gamePadController2 = Rewired.ReInput.players.GetPlayer(1);
+
+        if (! GameOptions.isMusicOn())
+        {
+            FindObjectOfType<GameOptions>().muteBackgroundMusic();
+        }
+
+        if (!GameOptions.isSoundFxOn())
+        {
+            FindObjectOfType<GameOptions>().muteSoundFX();
+        }
     }
 
     // Update is called once per frame

@@ -9,18 +9,25 @@ public class PauseMenu : MonoBehaviour
     public static bool isGamePaused = false;
     public GameObject pauseMenuUI;
     public GameObject firstButtonSelected;
+    Rewired.Player gamePadController1, gamePadController2;
+    bool pauseButton1, pauseButton2;
     // Start is called before the first frame update
 
     //private bool releasePlayerControl = true;
     void Start()
     {
+        gamePadController1 = Rewired.ReInput.players.GetPlayer(0);
+        gamePadController2 = Rewired.ReInput.players.GetPlayer(1);
         pauseMenuUI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        pauseButton1 = gamePadController1.GetButtonDown("Pause");
+        pauseButton2 = gamePadController2.GetButtonDown("Pause");
+
+        if (pauseButton1 || pauseButton2 || Input.GetKeyDown(KeyCode.Escape))
         {
             if (! isGamePaused)
             {
