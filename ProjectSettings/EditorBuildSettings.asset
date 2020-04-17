@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Milestone 5.unity
     guid: 70ad4a9d4bf9e08429323d880fdd1e0a
-  - enabled: 1
-    path: Assets/Scenes/old scenes/Credits.unity
-    guid: acbac9134576fc344bc485f65289b72c
   m_configObjects: {}

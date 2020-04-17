@@ -292,9 +292,13 @@ public class GameManager : MonoBehaviour
         {
             if (seconds == "0")
             {
-                seconds = "Collect!";
+                countDownUI.text = "Collect!";
+            } 
+            else
+            {
+                countDownUI.text = "Game Begins in \n" + seconds;
             }
-            countDownUI.text = "Game Begins in \n" + seconds;
+            
 
         }
         else

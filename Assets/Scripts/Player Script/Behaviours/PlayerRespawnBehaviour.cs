@@ -27,7 +27,7 @@ public class PlayerRespawnBehaviour : StateMachineBehaviour
         // changing state to Idle, so player is not caught anymore and then controls get enabled
         //playerLogic.setIsCaught(false); 
         playerLogic.enableControls(); // transition to Idle state so controls are enabled
-        playerLogic.setCanBeChased(true); // witch can chase and capture this player again
+        playerLogic.enablePlayerChasable(); // witch can chase and capture this player again
         animator.SetBool("isGettingUp", false);
     }
 }

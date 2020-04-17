@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour
 {
 
+    public float chaseResistanceTime = 2.0f;
     public float fieldOfViewX = 1f;
     [SerializeField] Transform playerBase;
     [SerializeField] Camera camera;
@@ -266,8 +267,20 @@ public class PlayerLogic : MonoBehaviour
         return this.canBeChased;
     }
 
+    public void enablePlayerChasable()
+    {
+        StartCoroutine(delayChaseable());
+    }
+
+    IEnumerator delayChaseable()
+    {
+        yield return new WaitForSeconds(chaseResistanceTime);
+        setCanBeChased(true);
+    }
+
     public void setCanBeChased(bool b)
     {
+
         this.canBeChased = b;
     } 
 
