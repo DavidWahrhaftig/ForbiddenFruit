@@ -7368,7 +7368,7 @@ PrefabInstance:
     - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
         type: 3}
       propertyPath: _userData.joystickMaps.Array.data[0].actionElementMaps.Array.data[11]._elementIdentifierId
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ccf980a37a874f0589e0343bde5a3ce, type: 3}
