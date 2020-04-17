@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
     public Animator gateAnimator;
     public Transform camera;
     public GameObject optionsMenu;
@@ -15,6 +14,7 @@ public class MainMenu : MonoBehaviour
 
     public TextMeshProUGUI timeDurationText;
     public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton, creditsCloseButton; 
+
 
     private SceneChanger sceneChanger;
     private int nextSceneIndex = 0;
@@ -99,8 +99,10 @@ public class MainMenu : MonoBehaviour
     }
 
     public void closeCredits() {
-        creditsDisplay.SetActive(false);
+        FindObjectOfType<GameOptions>().unmuteBackgroundMusic();
+        FindObjectOfType<GameOptions>().unmuteSoundFX();
 
+        creditsDisplay.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainFirstButton);
     }

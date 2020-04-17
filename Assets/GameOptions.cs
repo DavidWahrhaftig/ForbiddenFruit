@@ -28,69 +28,28 @@ public class GameOptions : MonoBehaviour
 
             musicToggle.isOn = musicOn;
             soundFXToggle.isOn = soundFxOn;
-            if (! musicOn) // for main menu only
-            {
-                muteBackgroundMusic();
-            }
-            else
-            {
-                unmuteBackgroundMusic();
-            }
-
-            if (! soundFxOn) // for main menu only
-            {
-                muteSoundFX();
-            }
-            else
-            {
-                unmuteSoundFX();
-            }
+            
+            mainMenuCheckSound();
         }
     }
-
 
     public void toggleMusic()
     {
         //musicOn = !musicOn;
         musicOn = musicToggle.isOn;
-        Debug.Log(musicOn);
+        Debug.Log("BG Music: " + musicOn);
 
-        if (! musicOn) // for main menu only
-        {
-            muteBackgroundMusic();
-        }
-        else
-        {
-            unmuteBackgroundMusic();
-        }
-
-        if (!soundFxOn) // for main menu only
-        {
-            muteSoundFX();
-        }
-        else
-        {
-            unmuteSoundFX();
-        }
-
-
+        mainMenuCheckSound();
     }
 
     public void toggleSoundFx()
     {
         //soundFxOn = !soundFxOn;
         soundFxOn = soundFXToggle.isOn;
-        Debug.Log(soundFxOn);
-
-        if (!soundFxOn) // for main menu only
-        {
-            muteSoundFX();
-        } 
-        else
-        {
-            unmuteSoundFX();
-        }
         
+        Debug.Log("SoundFx: " + soundFxOn);
+
+        mainMenuCheckSound();
     }
 
     public void decreaseGameDuration()
@@ -123,16 +82,15 @@ public class GameOptions : MonoBehaviour
     {
         return musicOn;
     }
-
+    
     static public bool isSoundFxOn()
     {
         return soundFxOn;
     }
 
-    static public void muteBackgroundMusic()
+    public void muteBackgroundMusic()
     {
-        // mute all sounds
-        // unmute sound fx
+        // mute bg sounds
 
         GameObject[] backgroundMusic = GameObject.FindGameObjectsWithTag("BG Sound");
 
@@ -143,20 +101,22 @@ public class GameOptions : MonoBehaviour
         }
     }
 
-    static public void unmuteBackgroundMusic()
+    public void unmuteBackgroundMusic()
     {
         // for menu only 
-
-        GameObject[] backgroundMusic = GameObject.FindGameObjectsWithTag("BG Sound");
-
-        for (int i = 0; i < backgroundMusic.Length; i++)
+        if (isMusicOn())
         {
-            AudioSource sound = backgroundMusic[i].GetComponent<AudioSource>();
-            sound.volume = 0.2f;
+            GameObject[] backgroundMusic = GameObject.FindGameObjectsWithTag("BG Sound");
+
+            for (int i = 0; i < backgroundMusic.Length; i++)
+            {
+                AudioSource sound = backgroundMusic[i].GetComponent<AudioSource>();
+                sound.volume = 0.2f;
+            }
         }
     }
 
-    static public void muteSoundFX()
+    public void muteSoundFX()
     {
         GameObject[] soundFX = GameObject.FindGameObjectsWithTag("Sound FX");
 
@@ -167,17 +127,41 @@ public class GameOptions : MonoBehaviour
         }
     }
 
-    static public void unmuteSoundFX()
+    public void unmuteSoundFX()
     {
-        // for main menu only
-        GameObject[] soundFX = GameObject.FindGameObjectsWithTag("Sound FX");
-
-        for (int i = 0; i < soundFX.Length; i++)
+        // for menu only
+        if(isMusicOn())
         {
-            AudioSource sound = soundFX[i].GetComponent<AudioSource>();
-            sound.volume = 0.3f;
+            GameObject[] soundFX = GameObject.FindGameObjectsWithTag("Sound FX");
+
+            for (int i = 0; i < soundFX.Length; i++)
+            {
+                AudioSource sound = soundFX[i].GetComponent<AudioSource>();
+                sound.volume = 0.3f;
+            }
         }
     }
 
-    
+    /* Only for main menu */
+
+    private void mainMenuCheckSound()
+    {
+        if (!musicOn) // for main menu only
+        {
+            muteBackgroundMusic();
+        } 
+        else
+        {
+            unmuteBackgroundMusic();
+        }
+
+        if (!soundFxOn) // for main menu only
+        {
+            muteSoundFX();
+        }
+        else
+        {
+            unmuteSoundFX();
+        }
+    }
 }

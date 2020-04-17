@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class CreditsDisplayScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //public AudioSource bgMusic;
 
     public void closeCredits()
     {
         FindObjectOfType<MainMenu>().closeCredits();
+    }
+
+    public void muteMusic()
+    {
+        FindObjectOfType<GameOptions>().muteBackgroundMusic();
+        FindObjectOfType<GameOptions>().muteSoundFX();
     }
 }

@@ -11361,6 +11361,11 @@ PrefabInstance:
       propertyPath: fieldOfViewX
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 581382059666174653, guid: 91bda12834efab645aa2271c99c2649e,
+        type: 3}
+      propertyPath: glowMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e2e92723b1de34f9c47b203b9b32ba, type: 2}
     - target: {fileID: 809303931701224085, guid: 91bda12834efab645aa2271c99c2649e,
         type: 3}
       propertyPath: enemyPlayer
@@ -12117,6 +12122,11 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 467031809}
+    - target: {fileID: 5251661053554194606, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: glowMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e2e92723b1de34f9c47b203b9b32ba, type: 2}
     - target: {fileID: 7863011286820077000, guid: b3e2149d983777049bd70761979f2fc6,
         type: 3}
       propertyPath: enemyPlayer

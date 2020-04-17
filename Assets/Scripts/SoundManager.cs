@@ -30,12 +30,12 @@ public class SoundManager : MonoBehaviour
 
         if (! GameOptions.isMusicOn())
         {
-            GameOptions.muteBackgroundMusic();
+            FindObjectOfType<GameOptions>().muteBackgroundMusic();
         }
 
         if (! GameOptions.isSoundFxOn())
         {
-            GameOptions.muteSoundFX();
+            FindObjectOfType<GameOptions>().muteSoundFX();
         }
     }
 
