@@ -81,7 +81,8 @@ public class GameManager : MonoBehaviour
         shotTimer2.text = "Magic Meter";
         gameResult1.text = "";
         gameResult2.text = "";
-        GameTimer.text = "";
+        //GameTimer.text = "";
+        GameTimer.gameObject.SetActive(false);
 
         startCounterTime = Time.time;
                
@@ -289,7 +290,10 @@ public class GameManager : MonoBehaviour
 
         if (remainingCountDownTime > Mathf.Epsilon)
         {
-
+            if (seconds == "0")
+            {
+                seconds = "Collect!";
+            }
             countDownUI.text = "Game Begins in \n" + seconds;
 
         }
@@ -301,6 +305,7 @@ public class GameManager : MonoBehaviour
                 startTime = Time.time;
                 player1.GetComponent<PlayerLogic>().enableControls();
                 player2.GetComponent<PlayerLogic>().enableControls();
+                GameTimer.gameObject.SetActive(true);
             }
 
             beginGame = true;
