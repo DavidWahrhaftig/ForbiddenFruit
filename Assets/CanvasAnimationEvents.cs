@@ -19,4 +19,10 @@ public class CanvasAnimationEvents : MonoBehaviour
     {
         MainMenu.setAllButtonsInteractable(false);
     }
+
+    public void playInstructionsAudio()
+    {
+        FindObjectOfType<MainMenu>().playInstructionsAudio();
+        FindObjectOfType<CameraOscillator>().setOscillating(false);
+    }
 }

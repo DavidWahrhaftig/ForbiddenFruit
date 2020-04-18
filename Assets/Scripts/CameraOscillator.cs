@@ -38,4 +38,9 @@ public class CameraOscillator : MonoBehaviour
             transform.position = startingPos + offset;
         }
     }
+
+    public void setOscillating(bool b)
+    {
+        isOscillating = b;
+    }
 }

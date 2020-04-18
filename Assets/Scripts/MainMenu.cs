@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI timeDurationText;
     public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton, creditsCloseButton;
 
-    public AudioSource titleVoice;
+    public AudioSource titleVoice, instructionsAudio;
 
     private SceneChanger sceneChanger;
     private int nextSceneIndex = 0;
@@ -79,9 +79,9 @@ public class MainMenu : MonoBehaviour
 
         canvasAnimator.SetTrigger("To Instructions");
 
-        SceneChanger.setSceneIndexSelected(SceneChanger.INSTRUCTIONS);
-        FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
-        transitionAnimation();
+        //SceneChanger.setSceneIndexSelected(SceneChanger.INSTRUCTIONS);
+        //FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
+        //transitionAnimation();
     }
 
     /*
@@ -143,6 +143,11 @@ public class MainMenu : MonoBehaviour
         string seconds = (gameOptions.getGameDuration() % 60).ToString("f0");
         if (seconds == "0") { seconds = "00"; }
         timeDurationText.text = minutes + ":" + seconds;
+    }
+
+    public void playInstructionsAudio()
+    {
+        instructionsAudio.Play();
     }
 
     
