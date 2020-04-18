@@ -16,7 +16,7 @@ public class PlayerLogic : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip hitSound, caughtSound;
 
-    public TextMeshProUGUI counterUI;
+    public GameObject fruitCounterUI;
 
 
     [SerializeField] SkinnedMeshRenderer playerSkin;
@@ -102,7 +102,8 @@ public class PlayerLogic : MonoBehaviour
 
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
         {
-            playSound(hitSound);
+            // play connot hit sound
+            //playSound(hitSound);
 
             // 
 
@@ -110,6 +111,7 @@ public class PlayerLogic : MonoBehaviour
                 !GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerLogic>().isGlowing() && 
                 !GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerLogic>().isCaught())
             {
+                playSound(hitSound);
                 chaseMe();
             }
             
@@ -180,7 +182,7 @@ public class PlayerLogic : MonoBehaviour
     {
         fruitCounter += 1;
         GetComponent<Animator>().SetTrigger("collecting");
-        counterUI.GetComponent<Animator>().SetTrigger("fruitGain"); // do gain animation of fruit counter
+        fruitCounterUI.GetComponent<Animator>().SetTrigger("fruitGain"); // do gain animation of fruit counter
 
     }
 
@@ -203,7 +205,7 @@ public class PlayerLogic : MonoBehaviour
         // update the fruitCoutner
         fruitCounter -= fruitToLose;
         // animate the fruitCounter UI
-        counterUI.GetComponent<Animator>().SetTrigger("fruitLoss"); // do lose animation of fruit counter
+        fruitCounterUI.GetComponent<Animator>().SetTrigger("fruitLoss"); // do lose animation of fruit counter
 
         // create the fruitToLose amount of fruit props
         for (int i = 0; i < fruitToLose; i++)
