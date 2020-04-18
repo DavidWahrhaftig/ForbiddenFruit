@@ -1,20 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator canvasAnimator;
     public Animator gateAnimator;
     public Transform camera;
     public GameObject optionsMenu;
     public GameObject creditsDisplay;
 
     public TextMeshProUGUI timeDurationText;
-    public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton, creditsCloseButton; 
+    public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton, creditsCloseButton;
 
+    public AudioSource titleVoice;
 
     private SceneChanger sceneChanger;
     private int nextSceneIndex = 0;
@@ -31,8 +35,20 @@ public class MainMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainFirstButton);
-
     }
+
+
+    static public void setAllButtonsInteractable(bool b)
+    {
+        Button[] allButtons = FindObjectsOfType<Button>();
+
+        for (int i = 0; i < allButtons.Length; i++)
+        {
+            Button button = allButtons[i];
+            button.interactable = b;
+        }
+    }
+
     private void Update()
     {
      
@@ -53,8 +69,16 @@ public class MainMenu : MonoBehaviour
         moveCamera = true;
     }
 
+    public void playTitleVoice()
+    {
+        titleVoice.Play();
+    }
+
     public void PlayGame()
     {
+
+        canvasAnimator.SetTrigger("To Instructions");
+
         SceneChanger.setSceneIndexSelected(SceneChanger.INSTRUCTIONS);
         FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
         transitionAnimation();
@@ -118,5 +142,7 @@ public class MainMenu : MonoBehaviour
         if (seconds == "0") { seconds = "00"; }
         timeDurationText.text = minutes + ":" + seconds;
     }
+
+    
 
 }
