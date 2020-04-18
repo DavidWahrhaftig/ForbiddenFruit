@@ -104,6 +104,7 @@ public class MainMenu : MonoBehaviour
         optionsMenu.SetActive(true);
 
         EventSystem.current.SetSelectedGameObject(null);
+        optionsFirstButton.GetComponent<Button>().interactable = true;
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
         
     }
@@ -122,6 +123,7 @@ public class MainMenu : MonoBehaviour
         creditsDisplay.SetActive(true);
 
         EventSystem.current.SetSelectedGameObject(null);
+        creditsCloseButton.GetComponent<Button>().interactable = true;
         EventSystem.current.SetSelectedGameObject(creditsCloseButton);
     }
 
