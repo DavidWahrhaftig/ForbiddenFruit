@@ -36,6 +36,12 @@ public class CanvasAnimationEvents : MonoBehaviour
         MainMenu.setMenuButtonsInteractable(true);
     }
 
+    public void buttonsNotInteractable()
+    {
+        //MainMenu.setAllButtonsInteractable(true);
+        MainMenu.setMenuButtonsInteractable(false);
+    }
+
 
     public void activateInstructions()
     {
