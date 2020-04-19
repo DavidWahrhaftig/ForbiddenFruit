@@ -10,8 +10,8 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public Animator canvasAnimator;
-    public Animator gateAnimator;
-    public Transform camera;
+    //public Animator gateAnimator;
+    //public Transform camera;
     public GameObject optionsMenu;
     public GameObject creditsDisplay;
 
@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
 
     private SceneChanger sceneChanger;
     private int nextSceneIndex = 0;
-    private bool moveCamera = false;
+    //private bool moveCamera = false;
 
     private GameOptions gameOptions;
 
@@ -52,15 +52,18 @@ public class MainMenu : MonoBehaviour
     private void Update()
     {
      
+        /*
         if (moveCamera)
         {
             camera.transform.Translate(transform.forward * 0.08f, Space.World);
         }
+        */
 
         // set value of game duration
         setTimeDurationText();
     }
 
+    /*
     private void transitionAnimation()
     {
         // open gate, move camera forwrad and fade out scene
@@ -68,6 +71,7 @@ public class MainMenu : MonoBehaviour
         camera.GetComponent<CameraOscillator>().isOscillating = false;
         moveCamera = true;
     }
+    */
 
     public void playTitleVoice()
     {
@@ -83,15 +87,6 @@ public class MainMenu : MonoBehaviour
         //FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
         //transitionAnimation();
     }
-
-    /*
-    public void CreditsWithEntrance()
-    {
-        //SceneChanger.setSceneIndexSelected(SceneChanger.CREDITS);
-        //FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
-        //transitionAnimation();
-    }
-    */
 
     public void QuitGame()
     {

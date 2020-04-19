@@ -23,6 +23,9 @@ public class Instructions : MonoBehaviour
         gamePadController2 = Rewired.ReInput.players.GetPlayer(1);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(rightArrowButton);
+
+        // set value of game duration
+        //setTimeDurationText();
     }
 
     // Update is called once per frame
