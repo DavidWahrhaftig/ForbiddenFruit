@@ -20,7 +20,6 @@ public class CanvasAnimationEvents : MonoBehaviour
         {
             instructions.gameObject.SetActive(false);
         }
-        MainMenu.setAllButtonsInteractable(false);
     }
 
     private void Update()
@@ -33,13 +32,11 @@ public class CanvasAnimationEvents : MonoBehaviour
 
     public void buttonsInteractable()
     {
-        MainMenu.setAllButtonsInteractable(true);
+        //MainMenu.setAllButtonsInteractable(true);
+        MainMenu.setMenuButtonsInteractable(true);
     }
 
-    public void buttonsNotInteractable()
-    {
-        MainMenu.setAllButtonsInteractable(false);
-    }
+
     public void activateInstructions()
     {
         //FindObjectOfType<Instructions>().GetComponent<GameObject>().SetActive(true);

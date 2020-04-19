@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public TextMeshProUGUI timeDurationText;
     public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton, creditsCloseButton;
+    static public Button[] menuButtons;
 
     public AudioSource titleVoice;
 
@@ -35,6 +36,18 @@ public class MainMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainFirstButton);
+
+        
+        menuButtons = GetComponentsInChildren<Button>();
+        setMenuButtonsInteractable(false);
+    }
+
+    static public void setMenuButtonsInteractable(bool b)
+    {
+        for (int i = 0; i < menuButtons.Length; i++)
+        {
+            menuButtons[i].interactable = b;
+        }   
     }
 
 
@@ -87,6 +100,8 @@ public class MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         optionsFirstButton.GetComponent<Button>().interactable = true;
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
+
+        //optionsClosedButton.GetComponent<Button>().interactable = true;
         
     }
 
@@ -108,9 +123,8 @@ public class MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(creditsCloseButton);
     }
 
+    
     public void closeCredits() {
-        FindObjectOfType<GameOptions>().unmuteBackgroundMusic();
-        FindObjectOfType<GameOptions>().unmuteSoundFX();
 
         creditsDisplay.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);

@@ -5,15 +5,24 @@ using UnityEngine;
 public class CreditsDisplayScript : MonoBehaviour
 {
     //public AudioSource bgMusic;
-
+    public AudioSource creditsMusic, bgMusic;
     public void closeCredits()
     {
         FindObjectOfType<MainMenu>().closeCredits();
+        creditsMusic.Stop();
+        if (GameOptions.isMusicOn())
+        {
+            bgMusic.mute = false;
+        }
+        
     }
 
-    public void muteMusic()
+    public void playCreditsMusic()
     {
-        FindObjectOfType<GameOptions>().muteBackgroundMusic();
-        FindObjectOfType<GameOptions>().muteSoundFX();
+        if (GameOptions.isMusicOn())
+        {
+            creditsMusic.Play();
+            bgMusic.mute = true;
+        }       
     }
 }
