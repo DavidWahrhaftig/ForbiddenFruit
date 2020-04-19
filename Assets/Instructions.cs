@@ -38,17 +38,18 @@ public class Instructions : MonoBehaviour
         }
 
         // Go To Game Scene
-        if (gamePadController1.GetButton("Camera Flip") && gamePadController2.GetButton("Camera Flip") || Input.GetKeyDown(KeyCode.Return))
+        if (gamePadController1.GetButton("Ready") && gamePadController2.GetButton("Ready") || Input.GetKeyDown(KeyCode.Return))
         {
             isReady = true;
             toggleConfirmation(check1, null, true); // visual check for player 1
             toggleConfirmation(check2, null, true); // visual check for player 2
-            
+
             //IEnumerator fadeSound = AudioFadeOut.FadeOut(sound, 2.0f);
             //StartCoroutine(fadeSound);
-            SceneChanger.setSceneIndexSelected(SceneChanger.GAME);
-            FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
-            gameObject.SetActive(false);
+            //SceneChanger.setSceneIndexSelected(SceneChanger.GAME);
+            //FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
+            //gameObject.SetActive(false);
+            FindObjectOfType<CanvasAnimationEvents>().GetComponent<Animator>().SetTrigger("Start Game");
         }
 
         // Go Back To Main Menu Scene
@@ -93,7 +94,7 @@ public class Instructions : MonoBehaviour
         }
         else
         {
-            if (gamePadController.GetButton("Camera Flip"))
+            if (gamePadController.GetButton("Ready"))
             {
                 Color tempColor = check.color;
                 tempColor.a = 1f;
@@ -106,8 +107,6 @@ public class Instructions : MonoBehaviour
                 check.color = tempColor;
             }
         }
-
-
     }
 
 }

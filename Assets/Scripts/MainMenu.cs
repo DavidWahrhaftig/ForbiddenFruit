@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI timeDurationText;
     public GameObject mainFirstButton, optionsFirstButton, optionsClosedButton, creditsCloseButton;
 
-    public AudioSource titleVoice, instructionsAudio;
+    public AudioSource titleVoice;
 
     private SceneChanger sceneChanger;
     private int nextSceneIndex = 0;
@@ -63,15 +63,6 @@ public class MainMenu : MonoBehaviour
         setTimeDurationText();
     }
 
-    /*
-    private void transitionAnimation()
-    {
-        // open gate, move camera forwrad and fade out scene
-        gateAnimator.SetTrigger("open");
-        camera.GetComponent<CameraOscillator>().isOscillating = false;
-        moveCamera = true;
-    }
-    */
 
     public void playTitleVoice()
     {
@@ -80,12 +71,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-
         canvasAnimator.SetTrigger("To Instructions");
-
-        //SceneChanger.setSceneIndexSelected(SceneChanger.INSTRUCTIONS);
-        //FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
-        //transitionAnimation();
     }
 
     public void QuitGame()
@@ -138,13 +124,6 @@ public class MainMenu : MonoBehaviour
         string seconds = (gameOptions.getGameDuration() % 60).ToString("f0");
         if (seconds == "0") { seconds = "00"; }
         timeDurationText.text = minutes + ":" + seconds;
-    }
-
-    public void playInstructionsAudio()
-    {
-        instructionsAudio.Play();
-    }
-
-    
+    } 
 
 }

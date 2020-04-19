@@ -6,15 +6,20 @@ public class CanvasAnimationEvents : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject instructionsObject;
+    public Instructions instructions;
     public Transform mainCamera;
     public Animator gateAnimator;
+
+    public AudioSource instructionsAudio;
 
     private bool moveCamera = false;
 
     void Start()
     {
-        instructionsObject.SetActive(false);
+        if (instructions)
+        {
+            instructions.gameObject.SetActive(false);
+        }
         MainMenu.setAllButtonsInteractable(false);
     }
 
@@ -35,11 +40,17 @@ public class CanvasAnimationEvents : MonoBehaviour
     {
         MainMenu.setAllButtonsInteractable(false);
     }
-
+    public void activateInstructions()
+    {
+        //FindObjectOfType<Instructions>().GetComponent<GameObject>().SetActive(true);
+        instructions.gameObject.SetActive(true);
+        //instructions.playInstructionsAudio();
+    }
     public void playInstructionsAudio()
     {
-        FindObjectOfType<MainMenu>().playInstructionsAudio();
+        //instructions.playInstructionsAudio();
         //FindObjectOfType<CameraOscillator>().setOscillating(false);
+        instructionsAudio.Play();
     }
 
     public void stopCameraOscillation()
@@ -47,10 +58,12 @@ public class CanvasAnimationEvents : MonoBehaviour
         mainCamera.GetComponent<CameraOscillator>().setOscillating(false);
     }
 
-    public void activateInstructions()
+
+
+    public void startGame()
     {
-        //FindObjectOfType<Instructions>().GetComponent<GameObject>().SetActive(true);
-        instructionsObject.SetActive(true);
+        enableMoveCamera();
+        openGate();
     }
 
     public void enableMoveCamera()
@@ -59,10 +72,19 @@ public class CanvasAnimationEvents : MonoBehaviour
         moveCamera = true;
     }
 
-    private void openGate()
+
+    public void openGate()
     {
         // open gate, move camera forwrad and fade out scene
         gateAnimator.SetTrigger("open"); 
     }
+
+    public void sceneTransition()
+    {
+        SceneChanger.setSceneIndexSelected(SceneChanger.GAME);
+        FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
+    }
+
+    
 
 }

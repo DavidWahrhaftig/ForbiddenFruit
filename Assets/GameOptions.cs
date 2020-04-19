@@ -97,7 +97,8 @@ public class GameOptions : MonoBehaviour
         for (int i = 0; i < backgroundMusic.Length; i++)
         {
             AudioSource sound = backgroundMusic[i].GetComponent<AudioSource>();
-            sound.volume = 0f;
+            //sound.volume = 0f;
+            sound.mute = true;
         }
     }
 
@@ -111,7 +112,8 @@ public class GameOptions : MonoBehaviour
             for (int i = 0; i < backgroundMusic.Length; i++)
             {
                 AudioSource sound = backgroundMusic[i].GetComponent<AudioSource>();
-                sound.volume = 0.2f;
+                //sound.volume = 0.2f;
+                sound.mute = false;
             }
         }
     }
@@ -123,7 +125,8 @@ public class GameOptions : MonoBehaviour
         for (int i = 0; i < soundFX.Length; i++)
         {
             AudioSource sound = soundFX[i].GetComponent<AudioSource>();
-            sound.volume = 0f;
+            //sound.volume = 0f;
+            sound.mute = true;
         }
     }
 
@@ -137,7 +140,8 @@ public class GameOptions : MonoBehaviour
             for (int i = 0; i < soundFX.Length; i++)
             {
                 AudioSource sound = soundFX[i].GetComponent<AudioSource>();
-                sound.volume = 0.3f;
+                //sound.volume = 0.3f;
+                sound.mute = false;
             }
         }
     }
