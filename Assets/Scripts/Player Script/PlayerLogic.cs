@@ -337,8 +337,12 @@ public class PlayerLogic : MonoBehaviour
     private void scarecrowSpell()
     {
         //playerController.setIsUnderSpell(true);   Moved to ScarecrowSpellBehaviour.cs
-        animator.SetTrigger("scarecrowSpell");
-        playerController.getGamePadController().SetVibration(0, 0.5f, 3.0f, true);
+        if(canBeChased )
+        {
+            animator.SetTrigger("scarecrowSpell");
+            playerController.getGamePadController().SetVibration(0, 0.5f, 3.0f, true);
+        }
+        
     }
 
     public bool iCanSee(GameObject Object)

@@ -8,9 +8,9 @@ public class SceneChanger : MonoBehaviour
 
     // Scene Indexes 
     static public int MENU = 0;
-    static public int INSTRUCTIONS = 1;
-    static public int GAME = 2;
-    static public int QUIT = 3;
+    static public int GAME = 1;
+    static public int QUIT = 2;
+    static public int INSTRUCTIONS = 999; // not used anymore
 
     static public int sceneIndexSelected;
 

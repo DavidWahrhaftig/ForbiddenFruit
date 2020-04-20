@@ -14,6 +14,7 @@ public class ScarecrowSpellBehaviour : StateMachineBehaviour
         animator.GetComponent<PlayerLogic>().audioSource.Stop();
         playerLogic.playSound(scarecrowSpell);
         //animator.SetBool("scarecrowSpellOn", false);
+        //playerLogic.setCanBeChased(false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -27,6 +28,7 @@ public class ScarecrowSpellBehaviour : StateMachineBehaviour
     {
         animator.GetComponent<PlayerController>().setIsUnderSpell(false);
         //animator.SetBool("scarecrowSpellOn", true);
+        //animator.GetComponent<PlayerLogic>().setCanBeChased(true);
 
     }
 

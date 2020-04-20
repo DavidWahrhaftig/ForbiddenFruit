@@ -49,7 +49,7 @@ public class FruitLossProp : MonoBehaviour
             if (other.tag != this.forbiddenPlayer.tag)
             {
                 other.GetComponent<PlayerLogic>().incrementFruitCounter();
-                other.GetComponent<AudioSource>().PlayOneShot(collectSound);
+                other.GetComponent<PlayerLogic>().audioSource.PlayOneShot(collectSound);
                 Destroy(gameObject);
             }
         }        

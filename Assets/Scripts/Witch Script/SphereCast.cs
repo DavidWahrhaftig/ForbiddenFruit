@@ -61,6 +61,19 @@ public class SphereCast : MonoBehaviour
             sphereRadius = hit1.distance * Mathf.Tan(Mathf.Deg2Rad * (this.lightComponent.spotAngle/2));
             distance1 = hit1.distance;
 
+
+            /*
+             
+            // detect player with xz position + radius of light, when colliders are above it
+
+            if (Math.Abs(transform.position.x - GameObject.FindWithTag("Player1").transform.position.x) <= Mathf.Epsilon && Mathf.Abs(transform.position.z - GameObject.FindWithTag("Player1").transform.position.z)<= Mathf.Epsilon)
+            {
+                Debug.LogWarning("Got Player");
+            }
+
+            */
+
+  
             if (Physics.SphereCast(origin, sphereRadius, direction, out hit2, hit1.distance, layerMask, QueryTriggerInteraction.UseGlobal))
             {
                 currentHitObject = hit2.transform.gameObject;

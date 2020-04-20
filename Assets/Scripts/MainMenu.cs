@@ -33,21 +33,22 @@ public class MainMenu : MonoBehaviour
         sceneChanger = FindObjectOfType<SceneChanger>();
         optionsMenu.SetActive(false);
         creditsDisplay.SetActive(false);
-
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(mainFirstButton);
-
         
         menuButtons = GetComponentsInChildren<Button>();
         setMenuButtonsInteractable(false);
     }
 
-    static public void setMenuButtonsInteractable(bool b)
+    public void setMenuButtonsInteractable(bool b)
     {
         for (int i = 0; i < menuButtons.Length; i++)
         {
             menuButtons[i].interactable = b;
-        }   
+        }
+        if (b)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(mainFirstButton);
+        }
     }
 
 

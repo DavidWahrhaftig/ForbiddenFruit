@@ -116,7 +116,9 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     }
     private bool canHarmPlayer(GameObject player)
     {
-        return !FindObjectOfType<GameManager>().isGameOver() && !player.GetComponent<PlayerLogic>().isCaught() && !player.GetComponent<PlayerLogic>().isDisabled();
+        GameManager gameManger = FindObjectOfType<GameManager>();
+        PlayerLogic playerLogic = player.GetComponent<PlayerLogic>();
+        return !gameManger.isGameOver() && playerLogic.canBeChased && !playerLogic.isCaught(); //!playerLogic.isCaught() && playerLogic.canBeChased;
     }
 
     

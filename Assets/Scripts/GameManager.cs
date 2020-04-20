@@ -240,7 +240,7 @@ public class GameManager : MonoBehaviour
 
 
                 // restart game when pressing Y or triangle button
-                if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart"))
+                if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Ready") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Ready"))
                 {
                     Restart();
                 }

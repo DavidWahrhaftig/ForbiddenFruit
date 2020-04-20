@@ -8,7 +8,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isGamePaused = false;
     public GameObject pauseMenuUI;
-    public GameObject firstButtonSelected;
+    public GameObject firstButtonSelected, controlsButton;
+    public GameObject controllerUI, controllerMapCloseButton;
     Rewired.Player gamePadController1, gamePadController2;
     bool pauseButton1, pauseButton2;
     // Start is called before the first frame update
@@ -43,6 +44,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         AudioListener.pause = false;
+        closeControls();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
@@ -87,6 +89,20 @@ public class PauseMenu : MonoBehaviour
         
     }
 
+    public void showControls()
+    {
+        controllerUI.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(controllerMapCloseButton);
+    }
+
+    public void closeControls()
+    {
+        controllerUI.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(controlsButton);
+        
+    }
     public void quitGame()
     {
         SceneChanger.setSceneIndexSelected(SceneChanger.QUIT);
