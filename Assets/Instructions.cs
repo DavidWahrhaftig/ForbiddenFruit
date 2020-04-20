@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Rewired.Integration.UnityUI;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,7 +16,7 @@ public class Instructions : MonoBehaviour
     [SerializeField] Image check1, check2;
     Rewired.Player gamePadController1, gamePadController2;
     [Range(0, 1)] [SerializeField] float checkTransparency = 0.3f;
-
+    
     bool isReady = false;
 
     void Start()
@@ -60,27 +62,57 @@ public class Instructions : MonoBehaviour
             FindObjectOfType<SceneChanger>().GetComponent<Animator>().SetTrigger("FadeOut");
         }
         */
+
+        instructionsScroll();
     }
 
-    public void next()
+    private void instructionsScroll()
     {
-        controllerUI.SetActive(false);
-        objective.SetActive(true);
-        rightArrowButton.GetComponent<Button>().interactable = false;
-        leftArrowButton.GetComponent<Button>().interactable = true;
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(leftArrowButton);
+        if (gamePadController1.GetButton("Menu Left") || gamePadController2.GetButton("Menu Left"))
+        {
+            goLeft();
+ 
+        }
 
+        if (gamePadController1.GetButton("Menu Right") || gamePadController2.GetButton("Menu Right"))
+        {
+            goRight();
+        }
     }
 
-    public void back()
+    public void goLeft()
     {
-        controllerUI.SetActive(true);
-        objective.SetActive(false);
-        rightArrowButton.GetComponent<Button>().interactable = true;
-        leftArrowButton.GetComponent<Button>().interactable = false;
+        Debug.Log("Press Left arrow");
+        // activate controller map, deactivate objective
+        switchInstructionContent(true, false);
+    }
+
+    public void goRight()
+    {
+        // deactivate controller map, activate objective
+        Debug.Log("Press right arrow");
+        switchInstructionContent(false, true);
+    }
+
+    private void switchInstructionContent(bool controllerOn, bool objectiveOn)
+    {
+        GameObject arrowSelected = null;
+
+        controllerUI.SetActive(controllerOn);
+        objective.SetActive(objectiveOn);
+        //rightArrowButton.GetComponent<Button>().interactable = controllerOn;
+        //leftArrowButton.GetComponent<Button>().interactable = objectiveOn;
+
+        if (controllerOn)
+        {
+            arrowSelected = rightArrowButton;
+        } else
+        {
+            arrowSelected = leftArrowButton;
+        }
+
         EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(rightArrowButton);
+        EventSystem.current.SetSelectedGameObject(arrowSelected);
     }
 
 

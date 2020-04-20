@@ -49,7 +49,7 @@ public class WitchLogic : MonoBehaviour
     public void stopChasing()
     {
         witchAnimator.SetBool("isChasing", false);
-        witchAnimator.SetBool("isIdle", true);
+        //witchAnimator.SetBool("isIdle", true);
 
         targetPlayer = null;
     }
