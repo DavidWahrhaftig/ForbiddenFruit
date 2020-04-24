@@ -93,13 +93,13 @@ public class Instructions : MonoBehaviour
 
     private void instructionsScroll()
     {
-        if (gamePadController1.GetButton("Menu Left") || gamePadController2.GetButton("Menu Left"))
+        if (gamePadController1.GetButtonDown("Menu Left") || gamePadController2.GetButtonDown("Menu Left"))
         {
             goLeft();
  
         }
 
-        if (gamePadController1.GetButton("Menu Right") || gamePadController2.GetButton("Menu Right"))
+        if (gamePadController1.GetButtonDown("Menu Right") || gamePadController2.GetButtonDown("Menu Right"))
         {
             goRight();
         }
