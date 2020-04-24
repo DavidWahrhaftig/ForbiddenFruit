@@ -10,6 +10,10 @@ public class Instructions : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject rightArrowButton, leftArrowButton;
+
+    public GameObject[] slides;
+    private int currentSlideIndex;
+    // delete after
     public GameObject controllerUI;
     public GameObject objective;
 
@@ -25,9 +29,30 @@ public class Instructions : MonoBehaviour
         gamePadController2 = Rewired.ReInput.players.GetPlayer(1);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(rightArrowButton);
+        
+        setupSlides();
 
         // set value of game duration
         //setTimeDurationText();
+    }
+
+    private void setupSlides()
+    {
+        for (int i = 0; i < slides.Length; i++)
+        {
+            if (i == 0)
+            {
+                currentSlideIndex = 0;
+                slides[i].SetActive(true);
+            }
+            else
+            {
+                slides[i].SetActive(false);
+            }
+        }
+
+        leftArrowButton.GetComponent<Button>().interactable = false;
+        
     }
 
     // Update is called once per frame
@@ -40,7 +65,7 @@ public class Instructions : MonoBehaviour
         }
 
         // Go To Game Scene
-        if (gamePadController1.GetButton("Ready") && gamePadController2.GetButton("Ready") || Input.GetKeyDown(KeyCode.Return))
+        if (gamePadController1.GetButton("Menu Ready") && gamePadController2.GetButton("Menu Ready")) //|| Input.GetKeyDown(KeyCode.Return))
         {
             isReady = true;
             toggleConfirmation(check1, null, true); // visual check for player 1
@@ -83,15 +108,53 @@ public class Instructions : MonoBehaviour
     public void goLeft()
     {
         Debug.Log("Press Left arrow");
+        if (currentSlideIndex > 0)
+        {
+            slides[currentSlideIndex].SetActive(false);
+            currentSlideIndex--;
+            slides[currentSlideIndex].SetActive(true);
+        }
+
+        if (currentSlideIndex == 0)
+        {
+            leftArrowButton.GetComponent<Button>().interactable = false;
+            // select right arrow
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(rightArrowButton);
+        } 
+        else if (currentSlideIndex < slides.Length - 1)
+        {
+            rightArrowButton.GetComponent<Button>().interactable = true;
+        }
+
         // activate controller map, deactivate objective
-        switchInstructionContent(true, false);
+        //switchInstructionContent(true, false);
     }
 
     public void goRight()
     {
         // deactivate controller map, activate objective
         Debug.Log("Press right arrow");
-        switchInstructionContent(false, true);
+        if (currentSlideIndex < slides.Length - 1)
+        {
+            slides[currentSlideIndex].SetActive(false);
+            currentSlideIndex++;
+            slides[currentSlideIndex].SetActive(true);
+        }
+
+        if (currentSlideIndex == slides.Length - 1)
+        {
+            // select left arrow
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(leftArrowButton);
+            rightArrowButton.GetComponent<Button>().interactable = false;
+        }
+        else if (currentSlideIndex > 0 )
+        {
+            leftArrowButton.GetComponent<Button>().interactable = true;
+        }
+
+        //switchInstructionContent(false, true);
     }
 
     private void switchInstructionContent(bool controllerOn, bool objectiveOn)
@@ -126,7 +189,7 @@ public class Instructions : MonoBehaviour
         }
         else
         {
-            if (gamePadController.GetButton("Ready"))
+            if (gamePadController.GetButton("Menu Ready"))
             {
                 Color tempColor = check.color;
                 tempColor.a = 1f;
