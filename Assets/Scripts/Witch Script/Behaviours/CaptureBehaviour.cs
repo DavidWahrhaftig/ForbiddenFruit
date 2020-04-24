@@ -99,9 +99,6 @@ public class CaptureBehaviour : StateMachineBehaviour
                     // activate prompt message
                     gameManager.activateResistanceSlider(targetPlayer);
                     targetPlayer.GetComponent<PlayerController>().getGamePadController().SetVibration(motorIndex, motorLevel);
-
-
-
                 }
             }
 

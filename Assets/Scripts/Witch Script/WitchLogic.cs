@@ -41,15 +41,18 @@ public class WitchLogic : MonoBehaviour
     {
         setTargetPlayer(player);
 
-        witchAnimator.SetBool("isChasing", true);
-        witchAnimator.SetBool("isIdle", false);
-        witchAnimator.SetBool("isPatrolling", false);
+        witchAnimator.SetTrigger("chase");
+        //witchAnimator.SetBool("isChasing", true);
+        //witchAnimator.SetBool("isIdle", false);
+        //witchAnimator.SetBool("isPatrolling", false);
     }
 
     public void stopChasing()
     {
-        witchAnimator.SetBool("isChasing", false);
+        //witchAnimator.SetBool("isChasing", false);
         //witchAnimator.SetBool("isIdle", true);
+
+        witchAnimator.SetTrigger("gameOver");
 
         targetPlayer = null;
     }
@@ -91,7 +94,7 @@ public class WitchLogic : MonoBehaviour
         {
             targetPlayer.GetComponent<PlayerLogic>().stopChasingMe();
         }
-        stopChasing();
+        //stopChasing();
         
     }
 

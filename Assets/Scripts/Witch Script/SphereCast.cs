@@ -42,7 +42,7 @@ public class SphereCast : MonoBehaviour
     void Update()
     {
         origin = transform.position;
-        direction = Vector3.down;
+        direction = Vector3.down; //* transform.rotation.x;
         angle = lightComponent.spotAngle;
         RaycastHit hit1; // only used for sphere radius calculation
         RaycastHit hit2;
@@ -100,11 +100,11 @@ public class SphereCast : MonoBehaviour
                         witchLogic.setTargetPlayer(player);
 
 
-
-                        animator.SetBool("isIdle", false);
-                        animator.SetBool("isChasing", false);
-                        animator.SetBool("isPatrolling", false);
-                        animator.SetBool("isCapturing", true);
+                        animator.SetTrigger("capture");
+                        //animator.SetBool("isIdle", false);
+                        //animator.SetBool("isChasing", false);
+                        //animator.SetBool("isPatrolling", false);
+                        //animator.SetBool("isCapturing", true);
                     }
                 }
             }           
