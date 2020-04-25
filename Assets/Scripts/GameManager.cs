@@ -104,16 +104,21 @@ public class GameManager : MonoBehaviour
 
 
         // Force Restart from Keyboard
-        if (Input.GetKeyDown(KeyCode.R))
+        if(Debug.isDebugBuild)
         {
-            Restart();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Restart();
+            }
+
+            // Quit Game from Keyboard
+            if (Input.GetKey(KeyCode.Q))
+            {
+                Application.Quit();
+            }
         }
 
-        // Quit Game from Keyboard
-        if (Input.GetKey(KeyCode.Q))
-        {
-            Application.Quit();
-        }
+      
 
         /*** UI Updates ***/
 

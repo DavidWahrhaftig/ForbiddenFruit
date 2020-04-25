@@ -191,10 +191,16 @@ MonoBehaviour:
       _defaultJoystickMaps:
       - _enabled: 1
         _categoryId: 0
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 0
         _layoutId: 2
       _defaultMouseMaps: []
       _defaultKeyboardMaps:
       - _enabled: 1
+        _categoryId: 1
+        _layoutId: 0
+      - _enabled: 0
         _categoryId: 1
         _layoutId: 1
       _defaultCustomControllerMaps: []
@@ -216,10 +222,16 @@ MonoBehaviour:
       _defaultJoystickMaps:
       - _enabled: 1
         _categoryId: 0
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 0
         _layoutId: 2
       _defaultMouseMaps: []
       _defaultKeyboardMaps:
       - _enabled: 1
+        _categoryId: 2
+        _layoutId: 0
+      - _enabled: 0
         _categoryId: 2
         _layoutId: 2
       _defaultCustomControllerMaps: []
@@ -697,9 +709,20 @@ MonoBehaviour:
         _modifierKey2: 0
         _modifierKey3: 0
       - _actionCategoryId: 0
-        _actionId: 18
+        _actionId: 21
         _elementType: 1
         _elementIdentifierId: 22
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 1
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 21
+        _elementType: 1
+        _elementIdentifierId: 20
         _axisRange: 0
         _invert: 0
         _axisContribution: 0
@@ -708,12 +731,23 @@ MonoBehaviour:
         _modifierKey2: 0
         _modifierKey3: 0
       - _actionCategoryId: 0
-        _actionId: 19
+        _actionId: 20
         _elementType: 1
-        _elementIdentifierId: 20
+        _elementIdentifierId: 19
         _axisRange: 0
         _invert: 0
         _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 20
+        _elementType: 1
+        _elementIdentifierId: 21
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 1
         _keyboardKeyCode: 0
         _modifierKey1: 0
         _modifierKey2: 0
@@ -1130,7 +1164,7 @@ MonoBehaviour:
     actionIdCounter: 23
     actionCategoryIdCounter: 2
     inputBehaviorIdCounter: 1
-    mapCategoryIdCounter: 6
+    mapCategoryIdCounter: 10
     joystickLayoutIdCounter: 4
     keyboardLayoutIdCounter: 3
     mouseLayoutIdCounter: 1

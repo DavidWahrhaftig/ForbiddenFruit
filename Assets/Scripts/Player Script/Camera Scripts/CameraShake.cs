@@ -21,17 +21,18 @@ public class CameraShake : MonoBehaviour
     {
         camAnim = GetComponent<Animator>();
         canShake = false;
+        gamePadController = GetComponentInParent<PlayerController>().getGamePadController();
     }
 
     // Update is called once per frame
     void Update()
     {
-        gamePadController = GetComponentInParent<PlayerController>().getGamePadController();
-        shakeLeft = gamePadController.GetButtonDown("ShakeLeft");
-        shakeRight = gamePadController.GetButtonDown("ShakeRight");
 
         if (canShake)
         {
+            shakeLeft = gamePadController.GetButtonDown("ShakeLeft");
+            shakeRight = gamePadController.GetButtonDown("ShakeRight");
+
             if (shakeLeft)
             {
                 camShakeLeft();

@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         #region Components and GameObjects Referencing
         gamePadController = Rewired.ReInput.players.GetPlayer(gamePadID);
@@ -185,12 +185,16 @@ public class PlayerController : MonoBehaviour
     {
         float turn = rotateHorizontal * rotationSpeed * Time.deltaTime;
 
+        //transform.Rotate(Vector3.up * turn);
+
+        
         //Debug.Log("yRotation " + turn);
         // Make this into a rotation in the y axis.
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
 
         // Apply this rotation to the rigidbody's rotation.
         body.MoveRotation(body.rotation * turnRotation);
+        
     }
 
     void Jump(float force, ForceMode type)
