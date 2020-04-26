@@ -25,6 +25,8 @@ public class SpecialFruit : MonoBehaviour
     private bool isCollectable = true;
 
 
+    private int fruitValue = 1;
+
     void Start()
     {
         //audioSource = GetComponent<AudioSource>();
@@ -53,7 +55,7 @@ public class SpecialFruit : MonoBehaviour
                     isCollectable = false;
                     isUnderSpell = false;
 
-                    other.gameObject.GetComponent<PlayerLogic>().incrementFruitCounter();
+                    other.gameObject.GetComponent<PlayerLogic>().incrementFruitCounter(fruitValue);
                     playFruitSound();
 
                     //Invoke("setFruitInactive", collectTime);
@@ -99,6 +101,7 @@ public class SpecialFruit : MonoBehaviour
         if (respawnable)
         {
             currentActiveFruit = neutralFruit;
+            fruitValue = 1;
             StartCoroutine(respawnFruitCoRoutine());
         }
     }
@@ -142,6 +145,7 @@ public class SpecialFruit : MonoBehaviour
             if (currentActiveFruit == neutralFruit)
             {
                 currentActiveFruit.SetActive(false);
+                fruitValue = 2;
                 currentActiveFruit = redFruit;
             }
         }
@@ -151,6 +155,7 @@ public class SpecialFruit : MonoBehaviour
             if (currentActiveFruit == neutralFruit)
             {
                 currentActiveFruit.SetActive(false);
+                fruitValue = 2;
                 currentActiveFruit = blueFruit;
             }
         }
@@ -170,6 +175,7 @@ public class SpecialFruit : MonoBehaviour
         {
             currentActiveFruit.SetActive(false);
             currentActiveFruit = neutralFruit;
+            fruitValue = 1;
             currentActiveFruit.SetActive(true);
 
             isUnderSpell = false;

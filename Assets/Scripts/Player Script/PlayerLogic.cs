@@ -178,9 +178,9 @@ public class PlayerLogic : MonoBehaviour
     }
 
 
-    public void incrementFruitCounter()
+    public void incrementFruitCounter(int amount)
     {
-        fruitCounter += 1;
+        fruitCounter += amount;
         GetComponent<Animator>().SetTrigger("collecting");
         fruitCounterUI.GetComponent<Animator>().SetTrigger("fruitGain"); // do gain animation of fruit counter
 
