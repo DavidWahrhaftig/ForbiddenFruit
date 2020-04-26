@@ -26,7 +26,7 @@ public class SpecialFruit : MonoBehaviour
 
 
     private int fruitValue = 1;
-
+    private FruitSpawnManager fruitSpawnManager;
     void Start()
     {
         //audioSource = GetComponent<AudioSource>();
@@ -36,6 +36,7 @@ public class SpecialFruit : MonoBehaviour
         blueFruit.SetActive(false);
 
         currentActiveFruit = neutralFruit;
+        fruitSpawnManager = GetComponent<FruitSpawnManager>();
     }
 
     // Update is called once per frame
@@ -109,6 +110,12 @@ public class SpecialFruit : MonoBehaviour
     IEnumerator respawnFruitCoRoutine()
     {
         bool wait = true;
+        if (fruitSpawnManager)
+        {
+            Debug.LogWarning("random respawns");
+            fruitSpawnManager.SpawnFruit();
+        } 
+        
         while (wait)
         {
             if (minDistanceFromPlayers() > respawnDistance)
