@@ -52,7 +52,6 @@ public class FruitCreater : MonoBehaviour
             //Debug.LogWarning("About to spawn new fruit");
             newFruit.GetComponent<FruitSpawnManager>().setSpawnAreas(spawnAreas);
             newFruit.GetComponent<FruitSpawnManager>().SpawnFruit();
-            newFruit.GetComponent<Oscillator>().isOscillating = true;
             fruitsCreated++;
         }
     }

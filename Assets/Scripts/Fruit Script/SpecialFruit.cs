@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,7 +31,7 @@ public class SpecialFruit : MonoBehaviour
     void Start()
     {
         //audioSource = GetComponent<AudioSource>();
-        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
 
         redFruit.SetActive(false);
         blueFruit.SetActive(false);
@@ -51,29 +52,26 @@ public class SpecialFruit : MonoBehaviour
         {
             if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
             {
-                if (canPlyerTakeFruit(other.gameObject.tag))
-                {
-                    isCollectable = false;
-                    isUnderSpell = false;
 
-                    other.gameObject.GetComponent<PlayerLogic>().incrementFruitCounter(fruitValue);
-                    playFruitSound();
+                isCollectable = false;
+                isUnderSpell = false;
 
-                    //Invoke("setFruitInactive", collectTime);
-                    //GetComponent<Oscillator>().isOscillating = false;
-                    setFruitInactive();
+                collectFruit(other.gameObject);
+
+                
+
+                setFruitInactive();
                     
-                    // change position of fruit
-                    if (fruitSpawnManager)
-                    {
-                        // same spot respawn
-                        Debug.LogWarning("random respawns");
-                        fruitSpawnManager.SpawnFruit();
-                    }
-
-                    Invoke("respawnFruit", respawnTime);
-
+                // change position of fruit
+                if (fruitSpawnManager)
+                {
+                    // same spot respawn
+                    Debug.LogWarning("random respawns");
+                    fruitSpawnManager.SpawnFruit();
                 }
+
+                Invoke("respawnFruit", respawnTime);
+
 
             }
             else if (other.gameObject.tag == "ProjectileRed" || other.gameObject.tag == "ProjectileBlue")
@@ -84,13 +82,42 @@ public class SpecialFruit : MonoBehaviour
         }
     }
 
+    private void collectFruit(GameObject player)
+    {
+        String playerTag = player.tag;
+
+        if (currentActiveFruit == neutralFruit)
+        {
+            player.GetComponent<PlayerLogic>().incrementFruitCounter(1);
+            // regular collect fruit sound
+            playFruitSound();
+
+        } else
+        {
+            GameObject enemyFruit = getEnemyFruit(playerTag);
+            
+            if (currentActiveFruit == enemyFruit)
+            {
+                player.GetComponent<PlayerLogic>().loseFruits(1, true);
+                // lose fruit sound or no sound
+            } else
+            {
+                player.GetComponent<PlayerLogic>().incrementFruitCounter(2);
+                // super collect fruit sound
+                playFruitSound();
+            }
+        }
+
+    }
+
     private void setFruitInactive()
     {
         currentActiveFruit.SetActive(false);
         //Invoke("respawnFruit", respawnTime);
     }
 
-    private bool canPlyerTakeFruit(string playerTag)
+
+    private GameObject getEnemyFruit(string playerTag)
     {
         GameObject enemyFruit = null;
         if (playerTag == "Player1")
@@ -103,8 +130,9 @@ public class SpecialFruit : MonoBehaviour
             enemyFruit = redFruit;
         }
 
-        return currentActiveFruit != enemyFruit;
+        return enemyFruit;
     }
+
 
     private void respawnFruit()
     {
@@ -152,7 +180,7 @@ public class SpecialFruit : MonoBehaviour
     {
         if (fruitSounds.Length != 0)
         {
-            int randomIndex = Random.Range(0, fruitSounds.Length);
+            int randomIndex = UnityEngine.Random.Range(0, fruitSounds.Length);
             audioSource.PlayOneShot(fruitSounds[randomIndex]);
         }
     }
