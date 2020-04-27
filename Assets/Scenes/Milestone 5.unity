@@ -30514,6 +30514,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[1]._defaultJoystickMaps.Array.data[0]._enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[1]._defaultJoystickMaps.Array.data[1]._enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[2]._defaultJoystickMaps.Array.data[0]._enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[2]._defaultJoystickMaps.Array.data[1]._enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[2]._defaultKeyboardMaps.Array.data[0]._enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[2]._defaultKeyboardMaps.Array.data[1]._enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[1]._defaultKeyboardMaps.Array.data[0]._enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[1]._defaultKeyboardMaps.Array.data[1]._enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ccf980a37a874f0589e0343bde5a3ce, type: 3}
 --- !u!114 &4643552057041568178 stripped

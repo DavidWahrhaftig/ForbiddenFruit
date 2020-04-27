@@ -84,7 +84,7 @@ public class SpecialFruit : MonoBehaviour
 
     private void collectFruit(GameObject player)
     {
-        String playerTag = player.tag;
+        string playerTag = player.tag;
 
         if (currentActiveFruit == neutralFruit)
         {
@@ -113,7 +113,6 @@ public class SpecialFruit : MonoBehaviour
     private void setFruitInactive()
     {
         currentActiveFruit.SetActive(false);
-        //Invoke("respawnFruit", respawnTime);
     }
 
 

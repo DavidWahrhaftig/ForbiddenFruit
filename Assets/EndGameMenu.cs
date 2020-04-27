@@ -40,13 +40,13 @@ public class EndGameMenu : MonoBehaviour
         rewiredEventSystem.submitButton = "Submit";
 
         // player1 switch maps
-        player1.controllers.maps.SetMapsEnabled(true, "Default", "Menu Joystick");
+        player1.controllers.maps.SetMapsEnabled(true, "Default", "EndMenu Joystick");
         player1.controllers.maps.SetMapsEnabled(false, "Default", "Default");
         player1.controllers.maps.SetMapsEnabled(true, ControllerType.Keyboard, "Keyboard1", "Menu Keyboard1");
         player1.controllers.maps.SetMapsEnabled(false, ControllerType.Keyboard, "Keyboard1", "Default");
 
         // player2 switch maps
-        player2.controllers.maps.SetMapsEnabled(true, "Default", "Menu Joystick");
+        player2.controllers.maps.SetMapsEnabled(true, "Default", "EndMenu Joystick");
         player2.controllers.maps.SetMapsEnabled(false, "Default", "Default");
         player2.controllers.maps.SetMapsEnabled(true, "Keyboard2", "Menu Keyboard2");
         player2.controllers.maps.SetMapsEnabled(false, "Keyboard2", "Default");
