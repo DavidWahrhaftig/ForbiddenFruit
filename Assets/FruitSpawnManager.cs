@@ -94,7 +94,7 @@ public class FruitSpawnManager : MonoBehaviour
 
     private bool stillSpaceAvailable()
     {
-        Debug.LogWarning("SpawnAreas.Length = " + spawnAreas.Length);
+        //Debug.LogWarning("SpawnAreas.Length = " + spawnAreas.Length);
         for (int i = 0; i < spawnAreas.Length; i ++)
         {
             if (spawnAreas[i].hasSpace())
@@ -117,6 +117,11 @@ public class FruitSpawnManager : MonoBehaviour
 
         for (int i = 0; i < colliders.Length; i++)
         {
+
+            if (colliders[i].isTrigger)
+            {
+                Debug.LogWarning(colliders[i].gameObject.tag + " is a trigger");
+            }
 
             // don't skip fruits or envrionemnt props colliders
             if (colliders[i].gameObject.tag == "SpecialFruit" || colliders[i].gameObject.tag == "Environment Prop" || colliders[i].gameObject.tag == "Collider Wall")

@@ -66,7 +66,7 @@ public class SpecialFruit : MonoBehaviour
                 if (fruitSpawnManager)
                 {
                     // same spot respawn
-                    Debug.LogWarning("random respawns");
+                    //Debug.LogWarning("random respawns");
                     fruitSpawnManager.SpawnFruit();
                 }
 

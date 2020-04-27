@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 518131317}
   m_Layer: 0
   m_Name: gateBlock
-  m_TagString: Untagged
+  m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 3014564734727673646}
   m_Layer: 0
   m_Name: InsideGateTrigger
-  m_TagString: Untagged
+  m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 6159429921811773463}
   m_Layer: 0
   m_Name: Left_Side_Gate_GEO
-  m_TagString: Untagged
+  m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 1671792406152275331}
   m_Layer: 0
   m_Name: OutsideGateTrigger
-  m_TagString: Untagged
+  m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 3909931664668982385}
   m_Layer: 0
   m_Name: Right_Side_Gate_GEO
-  m_TagString: Untagged
+  m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
