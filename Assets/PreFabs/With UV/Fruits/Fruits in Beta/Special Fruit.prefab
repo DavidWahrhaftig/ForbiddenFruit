@@ -158,9 +158,9 @@ Transform:
   m_LocalPosition: {x: 15.5, y: 0.55, z: 0.358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8557397555363506661}
-  - {fileID: 3714351024730944280}
   - {fileID: 3824328064187767}
+  - {fileID: 3714351024730944280}
+  - {fileID: 8557397555363506661}
   - {fileID: 5044009666713314111}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -215,7 +215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 0.2, z: 0}
   period: 2
-  isOscillating: 0
+  isOscillating: 1
+  isFruit: 1
 --- !u!114 &128813146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +232,7 @@ MonoBehaviour:
   radius: 3
   colliders: []
   currentArea: {fileID: 0}
+  spawnAreas: []
 --- !u!1001 &1084620971686649302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,7 +283,7 @@ PrefabInstance:
     - target: {fileID: 1081091725140123809, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1081091725140123809, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
         type: 3}
@@ -367,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 7269060691285889508, guid: a544c3685b96bfd43ac4aaf4a4c3e1ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7269060691285889508, guid: a544c3685b96bfd43ac4aaf4a4c3e1ad,
         type: 3}

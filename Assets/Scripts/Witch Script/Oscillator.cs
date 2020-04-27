@@ -7,7 +7,6 @@ public class Oscillator : MonoBehaviour
 {
     [SerializeField] Vector3 movementVector = new Vector3(10f,10f,10f);
     [SerializeField] float period = 2f;
-    public bool isOscillating = true;
     //[Range(0,1)] [SerializeField] float movementFactor; // 0 for not move, 1 for fully moved
     float movementFactor;
     Vector3 startingPos; // must be stored for absolute movement
@@ -44,8 +43,15 @@ public class Oscillator : MonoBehaviour
         movementFactor = rawWave / 2f + 0.5f;
         Vector3 offset = movementVector * movementFactor;
         if (isOscillating)
-        {
+        {   
             transform.position = startingPos + offset;
+             
         }
+
+    }
+
+    public void setStartingPos(Vector3 pos)
+    {
+        startingPos = pos;
     }
 }

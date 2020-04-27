@@ -60,6 +60,7 @@ public class SpecialFruit : MonoBehaviour
                     playFruitSound();
 
                     //Invoke("setFruitInactive", collectTime);
+                    //GetComponent<Oscillator>().isOscillating = false;
                     setFruitInactive();
                     
                     // change position of fruit
@@ -139,6 +140,7 @@ public class SpecialFruit : MonoBehaviour
 
         }
         currentActiveFruit.SetActive(true);
+        //GetComponent<Oscillator>().isOscillating = true;
         isCollectable = true;
 
         yield return null;

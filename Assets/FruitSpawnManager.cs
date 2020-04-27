@@ -29,6 +29,8 @@ public class FruitSpawnManager : MonoBehaviour
         int safetyNet = 0;
         int randomIndex = 0;
 
+        GetComponent<Oscillator>().isOscillating = false;
+
         if(currentArea)
         {
             currentArea.decreaseFruitsInside();
@@ -58,6 +60,9 @@ public class FruitSpawnManager : MonoBehaviour
                     Debug.Log("Too many attempts");
                 }
                 transform.position = originalPos;
+                //GetComponent<Oscillator>().setStartingPos(;
+                GetComponent<Oscillator>().setStartingPos(originalPos);
+                GetComponent<Oscillator>().isOscillating = true;
                 return;
             }
 
@@ -78,9 +83,13 @@ public class FruitSpawnManager : MonoBehaviour
                 Debug.LogWarning("randomIndex " + randomIndex);
                 currentArea = spawnAreas[randomIndex];
                 currentArea.incramentFruitCounter();
+                GetComponent<Oscillator>().setStartingPos(spawnPos);
+                GetComponent<Oscillator>().isOscillating = true;
                 break;
             }
         }
+
+        
     }
 
     private bool stillSpaceAvailable()
