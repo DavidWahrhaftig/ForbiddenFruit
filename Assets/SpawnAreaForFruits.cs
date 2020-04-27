@@ -8,13 +8,6 @@ public class SpawnAreaForFruits : MonoBehaviour
     public int limit = 5;
     public int fruitsInside = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-
     void OnDrawGizmos()
     {
         Gizmos.color = GizmosColor;
@@ -36,26 +29,23 @@ public class SpawnAreaForFruits : MonoBehaviour
 
     public bool hasSpace()
     {
+        //Debug.LogWarning("fruitsInside < limit  = " + fruitsInside + " < " + limit);
         return fruitsInside < limit;
     }
 
-    public void incramentFruitCounter(SpawnAreaForFruits previousArea)
+    public void incramentFruitCounter()
     {
-        if (previousArea == null)
-        {
-            fruitsInside++;
-        }
-
-        else if (previousArea.gameObject != this.gameObject)
-        {
-            fruitsInside++;
-            previousArea.decreaseFruitsInside();
-        }        
+        fruitsInside++;        
     }
 
-    private void decreaseFruitsInside()
+    public void decreaseFruitsInside()
     {
         fruitsInside--;
+    }
+
+    public int getLimit()
+    {
+        return limit;
     }
 
 }

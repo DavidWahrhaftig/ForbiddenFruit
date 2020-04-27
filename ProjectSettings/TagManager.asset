@@ -17,6 +17,8 @@ TagManager:
   - SceneChanger
   - BG Sound
   - Sound FX
+  - Environment Prop
+  - Collider Wall
   layers:
   - Default
   - TransparentFX

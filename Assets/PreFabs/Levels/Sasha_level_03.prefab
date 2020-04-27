@@ -1267,6 +1267,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkim (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1432,6 +1437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkim (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1521,6 +1531,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pumpkim (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
@@ -1612,6 +1627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkim (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1701,6 +1721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pumpkim (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
@@ -1792,6 +1817,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkim (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1881,6 +1911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pumpkim
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
@@ -1972,6 +2007,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkim (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2061,6 +2101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -2152,6 +2197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cross_tomb
       objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2241,6 +2291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gate 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247215307968856203, guid: 87a4cb55124cf9a4e9d7508efeb9186f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 9118244832713585304, guid: 87a4cb55124cf9a4e9d7508efeb9186f,
         type: 3}
@@ -2767,6 +2822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: irish_tomb
       objectReference: {fileID: 0}
+    - target: {fileID: 7188578011397319900, guid: fdf42b2e562f2d447a7aab057a5adb2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 6168150580068064975, guid: fdf42b2e562f2d447a7aab057a5adb2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2856,6 +2916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -3306,6 +3371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -3839,6 +3909,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3928,6 +4003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cross_tomb (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
@@ -4846,6 +4926,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4935,6 +5020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -5101,6 +5191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5266,6 +5361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate_blue
       objectReference: {fileID: 0}
+    - target: {fileID: 7977364484859399358, guid: ec0962585f267134c83eb433f93ba09c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 6408080636863217325, guid: ec0962585f267134c83eb433f93ba09c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5321,13 +5421,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1461547890, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
-      propertyPath: allowedPlayers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1461547891, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
       propertyPath: m_Volume
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461547890, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
+      propertyPath: allowedPlayers.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
@@ -5348,6 +5448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gate_red
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977364484859399358, guid: ec0962585f267134c83eb433f93ba09c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 6408080636863217325, guid: ec0962585f267134c83eb433f93ba09c,
         type: 3}
@@ -5513,6 +5618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: board_tomb (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
@@ -5783,6 +5893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -6159,6 +6274,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -1.026
       objectReference: {fileID: 0}
+    - target: {fileID: 3827219534815944619, guid: 8b2e946be9a4b79459659a90b514a5da,
+        type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155306730941685413, guid: 8b2e946be9a4b79459659a90b514a5da,
+        type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406427999647253823, guid: 8b2e946be9a4b79459659a90b514a5da,
+        type: 3}
+      propertyPath: stopAction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406427999647253823, guid: 8b2e946be9a4b79459659a90b514a5da,
+        type: 3}
+      propertyPath: LightsModule.rangeCurve.scalar
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8063879870653280020, guid: 8b2e946be9a4b79459659a90b514a5da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6194,26 +6329,6 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.9112854
       objectReference: {fileID: 0}
-    - target: {fileID: 3827219534815944619, guid: 8b2e946be9a4b79459659a90b514a5da,
-        type: 3}
-      propertyPath: LightsModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155306730941685413, guid: 8b2e946be9a4b79459659a90b514a5da,
-        type: 3}
-      propertyPath: LightsModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5406427999647253823, guid: 8b2e946be9a4b79459659a90b514a5da,
-        type: 3}
-      propertyPath: stopAction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5406427999647253823, guid: 8b2e946be9a4b79459659a90b514a5da,
-        type: 3}
-      propertyPath: LightsModule.rangeCurve.scalar
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b2e946be9a4b79459659a90b514a5da, type: 3}
 --- !u!4 &1244963535313420954 stripped
@@ -6245,6 +6360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: irish_tomb (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188578011397319900, guid: fdf42b2e562f2d447a7aab057a5adb2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 6168150580068064975, guid: fdf42b2e562f2d447a7aab057a5adb2a,
         type: 3}
@@ -6335,6 +6455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -6515,6 +6640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: board_tomb (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
@@ -6785,6 +6915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: irish_tomb (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188578011397319900, guid: fdf42b2e562f2d447a7aab057a5adb2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 6168150580068064975, guid: fdf42b2e562f2d447a7aab057a5adb2a,
         type: 3}
@@ -7236,6 +7371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cross_tomb (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7596,6 +7736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skull (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7775,6 +7920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -7956,6 +8106,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: irish_tomb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7188578011397319900, guid: fdf42b2e562f2d447a7aab057a5adb2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 6168150580068064975, guid: fdf42b2e562f2d447a7aab057a5adb2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8046,6 +8201,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8120,6 +8280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: board_tomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
@@ -8571,6 +8736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Creepy_Tree_04_Finish_Unwarping_UV (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 209380114366865288, guid: fd14b4328f6ea004b8b4214018b46109,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3800061453496020379, guid: fd14b4328f6ea004b8b4214018b46109,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8931,6 +9101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Creepy_Tree_01_Finish_Unwarping_UV (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8044831102985132420, guid: 087e49fdfac81ed488819a485698821a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 6485080775659596695, guid: 087e49fdfac81ed488819a485698821a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9200,6 +9375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: irish_tomb (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188578011397319900, guid: fdf42b2e562f2d447a7aab057a5adb2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 6168150580068064975, guid: fdf42b2e562f2d447a7aab057a5adb2a,
         type: 3}
@@ -9921,6 +10101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skull (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10461,6 +10646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkim
       objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10821,6 +11011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_No_Leafs_Finish_Unwarping_UV
       objectReference: {fileID: 0}
+    - target: {fileID: 8394595835828947153, guid: 337f87c452ccaac45a5f941ab153bb2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 4766147298530441922, guid: 337f87c452ccaac45a5f941ab153bb2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11001,6 +11196,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11170,6 +11370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: board_tomb (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
@@ -11621,6 +11826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: board_tomb (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11800,6 +12010,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -12341,6 +12556,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Creepy_Tree_01_Finish_Unwarping_UV (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8044831102985132420, guid: 087e49fdfac81ed488819a485698821a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 6485080775659596695, guid: 087e49fdfac81ed488819a485698821a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12791,6 +13011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skull (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12880,6 +13105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -13060,6 +13290,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -13596,6 +13831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cross_tomb
       objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13685,6 +13925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: board_tomb (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
@@ -14856,6 +15101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Creepy_Tree_04_Finish_Unwarping_UV (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 209380114366865288, guid: fd14b4328f6ea004b8b4214018b46109,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3800061453496020379, guid: fd14b4328f6ea004b8b4214018b46109,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14945,6 +15195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: board_tomb (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
@@ -15215,6 +15470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -16021,6 +16281,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Creepy_Tree_04_Finish_Unwarping_UV (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 209380114366865288, guid: fd14b4328f6ea004b8b4214018b46109,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3800061453496020379, guid: fd14b4328f6ea004b8b4214018b46109,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16381,6 +16646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skull (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16470,6 +16740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -16650,6 +16925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: board_tomb (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
@@ -17821,6 +18101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cross_tomb (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17910,6 +18195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Creepy_Tree_04_Finish_Unwarping_UV
+      objectReference: {fileID: 0}
+    - target: {fileID: 209380114366865288, guid: fd14b4328f6ea004b8b4214018b46109,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3800061453496020379, guid: fd14b4328f6ea004b8b4214018b46109,
         type: 3}
@@ -18091,6 +18381,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18255,6 +18550,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_No_Leafs_Finish_Unwarping_UV (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394595835828947153, guid: 337f87c452ccaac45a5f941ab153bb2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 4766147298530441922, guid: 337f87c452ccaac45a5f941ab153bb2b,
         type: 3}
@@ -18526,6 +18826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cross_tomb (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18616,6 +18921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skull (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18705,6 +19015,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cross_tomb (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
@@ -19516,6 +19831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20321,6 +20641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Creepy_Tree_03_Finish_Unwarping_UV
       objectReference: {fileID: 0}
+    - target: {fileID: 7251757041996158517, guid: 3f90556eabca60143b29405b18d5c4be,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5978584869700674598, guid: 3f90556eabca60143b29405b18d5c4be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20410,6 +20735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Creepy_Tree_01_Finish_Unwarping_UV (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044831102985132420, guid: 087e49fdfac81ed488819a485698821a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 6485080775659596695, guid: 087e49fdfac81ed488819a485698821a,
         type: 3}
@@ -20680,6 +21010,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -21131,6 +21466,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skull (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21220,6 +21560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: board_tomb (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
@@ -21400,6 +21745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Creepy_Tree_02_Finish_Unwarping_UV (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771883528897961848, guid: 31c5884798379e242b4a3cdc373d8c41,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 1165566690498375019, guid: 31c5884798379e242b4a3cdc373d8c41,
         type: 3}
@@ -21761,6 +22111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: irish_tomb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7188578011397319900, guid: fdf42b2e562f2d447a7aab057a5adb2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 6168150580068064975, guid: fdf42b2e562f2d447a7aab057a5adb2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21941,6 +22296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fountain complete
       objectReference: {fileID: 0}
+    - target: {fileID: 4500514213422096690, guid: d5a74d12b1204af40a8b0a54e1a01969,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 589496622191743777, guid: d5a74d12b1204af40a8b0a54e1a01969,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22030,6 +22390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Creepy_Tree_02_Finish_Unwarping_UV
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771883528897961848, guid: 31c5884798379e242b4a3cdc373d8c41,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 1165566690498375019, guid: 31c5884798379e242b4a3cdc373d8c41,
         type: 3}
@@ -22571,6 +22936,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cross_tomb (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22840,6 +23210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cross_tomb (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
@@ -23201,6 +23576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: irish_tomb
       objectReference: {fileID: 0}
+    - target: {fileID: 7188578011397319900, guid: fdf42b2e562f2d447a7aab057a5adb2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 6168150580068064975, guid: fdf42b2e562f2d447a7aab057a5adb2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23471,6 +23851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: board_tomb (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23650,6 +24035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -24461,6 +24851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cross_tomb (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25091,6 +25486,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25631,6 +26031,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25721,6 +26126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: board_tomb
       objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25810,6 +26220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -26080,6 +26495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -26441,6 +26861,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: board_tomb
       objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26711,6 +27136,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26801,6 +27231,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: board_tomb (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2040720668195468592, guid: 2646f5dae381767448edc15580c84669,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3029024218202261283, guid: 2646f5dae381767448edc15580c84669,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26890,6 +27325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -27161,6 +27601,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cross_tomb (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27341,6 +27786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27430,6 +27880,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -27605,6 +28060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cross_tomb (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
@@ -28108,6 +28568,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: irish_tomb (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7188578011397319900, guid: fdf42b2e562f2d447a7aab057a5adb2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 6168150580068064975, guid: fdf42b2e562f2d447a7aab057a5adb2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28362,6 +28827,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skull
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
@@ -29060,6 +29530,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skull (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29240,6 +29715,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkim
       objectReference: {fileID: 0}
+    - target: {fileID: 3975212173773554321, guid: 0e38fbf194d33af4f8b779d440424413,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 104026659035951234, guid: 0e38fbf194d33af4f8b779d440424413,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29330,6 +29810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29419,6 +29904,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cross_tomb (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 80660645145594786, guid: b246fac0bbbeabe4f92a6b8775397bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 3982811224752994737, guid: b246fac0bbbeabe4f92a6b8775397bab,
         type: 3}
@@ -29870,6 +30360,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30125,6 +30620,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30209,6 +30709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
@@ -30400,6 +30905,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 9.692
       objectReference: {fileID: 0}
+    - target: {fileID: 155306730941685413, guid: 8b2e946be9a4b79459659a90b514a5da,
+        type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155306730941685413, guid: 8b2e946be9a4b79459659a90b514a5da,
+        type: 3}
+      propertyPath: LightsModule.maxLights
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155306730941685413, guid: 8b2e946be9a4b79459659a90b514a5da,
+        type: 3}
+      propertyPath: LightsModule.rangeCurve.scalar
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8063879870653280020, guid: 8b2e946be9a4b79459659a90b514a5da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30434,21 +30954,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.y
       value: 2.408269
-      objectReference: {fileID: 0}
-    - target: {fileID: 155306730941685413, guid: 8b2e946be9a4b79459659a90b514a5da,
-        type: 3}
-      propertyPath: LightsModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155306730941685413, guid: 8b2e946be9a4b79459659a90b514a5da,
-        type: 3}
-      propertyPath: LightsModule.maxLights
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155306730941685413, guid: 8b2e946be9a4b79459659a90b514a5da,
-        type: 3}
-      propertyPath: LightsModule.rangeCurve.scalar
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b2e946be9a4b79459659a90b514a5da, type: 3}
@@ -30557,6 +31062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1_ complete (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
+      objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30636,6 +31146,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_1_ complete
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145061710189184216, guid: bb5a2839052d26f4b9378cc40e8c452f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Environment Prop
       objectReference: {fileID: 0}
     - target: {fileID: 5139253277411555019, guid: bb5a2839052d26f4b9378cc40e8c452f,
         type: 3}

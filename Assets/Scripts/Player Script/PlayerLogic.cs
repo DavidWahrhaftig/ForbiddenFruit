@@ -90,7 +90,7 @@ public class PlayerLogic : MonoBehaviour
             Debug.Log("FruitCounter: " + fruitCounter);
         }
 
-        if (collision.transform.tag == "Ground")
+        if (collision.transform.tag == "Ground" || collision.transform.tag == "Environment Prop")
         {
             if (!playerController.grounded)
             {

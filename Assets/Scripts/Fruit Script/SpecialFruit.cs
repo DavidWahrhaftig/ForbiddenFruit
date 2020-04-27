@@ -61,6 +61,14 @@ public class SpecialFruit : MonoBehaviour
 
                     //Invoke("setFruitInactive", collectTime);
                     setFruitInactive();
+                    
+                    // change position of fruit
+                    if (fruitSpawnManager)
+                    {
+                        // same spot respawn
+                        Debug.LogWarning("random respawns");
+                        fruitSpawnManager.SpawnFruit();
+                    }
 
                     Invoke("respawnFruit", respawnTime);
 
@@ -110,11 +118,13 @@ public class SpecialFruit : MonoBehaviour
     IEnumerator respawnFruitCoRoutine()
     {
         bool wait = true;
+        /*
         if (fruitSpawnManager)
         {
             Debug.LogWarning("random respawns");
             fruitSpawnManager.SpawnFruit();
         } 
+        */
         
         while (wait)
         {

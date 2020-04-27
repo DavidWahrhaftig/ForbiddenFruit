@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,14 +10,15 @@ public class FruitSpawnManager : MonoBehaviour
     GameObject fruit;
     public float radius;
     public Collider[] colliders;
-    //public ArrayList<> collidersNoTrigers;
-    public SpawnAreaForFruits previousArea;
-    private SpawnAreaForFruits[] spawnAreas;
+    public SpawnAreaForFruits currentArea;
+    public SpawnAreaForFruits[] spawnAreas;
+    private Vector3 originalPos;
     void Start()
     {
         fruit = this.gameObject;
-        spawnAreas = FindObjectsOfType<SpawnAreaForFruits>();
-        Debug.LogWarning("spawnAreas.Length = " + spawnAreas.Length);
+        //spawnAreas = FindObjectsOfType<SpawnAreaForFruits>();  --------> made a setter method, otherwise null error occurs
+        originalPos = transform.position;
+        //Debug.LogWarning("spawnAreas.Length = " + spawnAreas.Length);
     }
 
     public void SpawnFruit()
@@ -26,22 +28,44 @@ public class FruitSpawnManager : MonoBehaviour
         bool foundAvailableSpace;
         int safetyNet = 0;
         int randomIndex = 0;
-        //randomIndex = Random.Range(0, spawnAreas.Length);
 
+        if(currentArea)
+        {
+            currentArea.decreaseFruitsInside();
+        }
+        
         while (!canSpawnHere)
         {
-            //float spawnPosX = Random.Range(fruit.transform.position.x - 4f, fruit.transform.position.x + 4f);
-            //float spawnPosY = Random.Range(fruit.transform.position.y, fruit.transform.position.y);
-            //float spawnPosZ = Random.Range(fruit.transform.position.z - 4f, fruit.transform.position.z + 4f);
-
-            //spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
-
             foundAvailableSpace = false;
+            safetyNet++;
 
-            while(!foundAvailableSpace)
+            if (! stillSpaceAvailable() || safetyNet > 50)
             {
-                randomIndex = Random.Range(0, spawnAreas.Length);
-                foundAvailableSpace = spawnAreas[randomIndex].hasSpace();
+
+                /*
+                // fruit will spawn at the same location it is in. 
+                
+                if (currentArea)
+                {
+                    //currentArea.incramentFruitCounter(); // self incramentation
+                    transform.position = originalPos;
+                }
+                */
+                //Debug.LogWarning("Still SpaceAvailable  = " + stillSpaceAvailable());
+                Debug.LogWarning("didn't move, same spot still");
+                if (safetyNet > 50)
+                {
+                    Debug.Log("Too many attempts");
+                }
+                transform.position = originalPos;
+                return;
+            }
+
+
+            while (!foundAvailableSpace)
+            {
+                randomIndex = UnityEngine.Random.Range(0, spawnAreas.Length);
+                foundAvailableSpace = spawnAreas[randomIndex].hasSpace();   
             }
 
             spawnPos = spawnAreas[randomIndex].getRandomPosition();
@@ -52,61 +76,55 @@ public class FruitSpawnManager : MonoBehaviour
             {
                 transform.position = spawnPos;
                 Debug.LogWarning("randomIndex " + randomIndex);
-                spawnAreas[randomIndex].incramentFruitCounter(previousArea);
-                previousArea = spawnAreas[randomIndex];
+                currentArea = spawnAreas[randomIndex];
+                currentArea.incramentFruitCounter();
                 break;
             }
-
-            safetyNet++;
-
-            if (safetyNet > 50)
-            {
-                Debug.Log("Too many attempts");
-                break;
-               
-            }
-
         }
+    }
+
+    private bool stillSpaceAvailable()
+    {
+        Debug.LogWarning("SpawnAreas.Length = " + spawnAreas.Length);
+        for (int i = 0; i < spawnAreas.Length; i ++)
+        {
+            if (spawnAreas[i].hasSpace())
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     bool PreventSpawnOverLap(Vector3 spawnPos)
     {
-        colliders = Physics.OverlapSphere(transform.position, radius);
-        int nonTriggers = 0;
+        int numColliding = Physics.OverlapSphereNonAlloc(spawnPos, radius, colliders);
+        
+        //colliders = Physics.OverlapSphere(transform.position, radius);
+        //colliders = Physics.OverlapSphere(spawnPos, radius);
+        //int numColliding = Physics.OverlapSphereNonAlloc(spawnPos, radius, colliders);
 
-        for (int i = 0; i <colliders.Length; i++)
+        //int nonTriggers = 0;
+
+        for (int i = 0; i < colliders.Length; i++)
         {
-            if (!colliders[i].isTrigger)
+
+            // don't skip fruits or envrionemnt props colliders
+            if (colliders[i].gameObject.tag == "SpecialFruit" || colliders[i].gameObject.tag == "Environment Prop" || colliders[i].gameObject.tag == "Collider Wall")
             {
-                nonTriggers++;
-                Vector3 centerPoint = colliders[i].bounds.center;
-                float width = colliders[i].bounds.extents.x;
-                float height = colliders[i].bounds.extents.y;
-                float depth = colliders[i].bounds.extents.z;
+                Debug.LogWarning("----colliding with a fruit or environment prop or collider ----");
+                return false;
 
-                float leftExtend = centerPoint.x - width;
-                float rightExtend = centerPoint.x + width;
-                float lowerExtend = centerPoint.y - height;
-                float upperExtend = centerPoint.y + height;
-                float backExtend = centerPoint.z - depth;
-                float forwardExtend = centerPoint.z + depth;
-
-                if (spawnPos.x >= leftExtend && spawnPos.x <= rightExtend)
-                {
-                    if (spawnPos.y >= lowerExtend && spawnPos.y <= upperExtend)
-                    {
-                        if (spawnPos.z >= backExtend && spawnPos.z <= forwardExtend)
-                        {
-                            //Debug.LogWarning("Non triggers = " + nonTriggers);
-                            return false;
-                        }
-                    }
-                }
             }
-            
         }
 
         //Debug.LogWarning("Non triggers = " + nonTriggers);
         return true;
+    }
+
+
+    public void setSpawnAreas(SpawnAreaForFruits[] areas)
+    {
+        spawnAreas = areas;
     }
 }
