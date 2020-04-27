@@ -17,9 +17,9 @@ public class CaptureWait : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Debug.Log("Captured Done");
-        //animator.SetBool("isCapturing", false);
-        //animator.SetBool("isIdle", true);
-        animator.SetTrigger("idle");
+        animator.SetBool("isCapturing", false);
+        animator.SetBool("isIdle", true);
+        //animator.SetTrigger("idle");
         //yield return null;
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class ChaseBehaviour : StateMachineBehaviour
 {
 
+    // animator.setBool is set externally in SphereCast.cs
+
     public float speed = 1;
     public float rotationSpeed = 2;
 

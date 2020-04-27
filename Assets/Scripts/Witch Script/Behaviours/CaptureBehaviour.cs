@@ -135,6 +135,7 @@ public class CaptureBehaviour : StateMachineBehaviour
             if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() == 0 || playerPower >= goal)
             {
                 targetPlayer.GetComponentInChildren<CameraShake>().setCanShake(false);
+                // animator.setBool("isIdle", true);        is set in waitScript
                 waitScript.DoCoroutine(waitTime);
                 freePlayer = true;
 

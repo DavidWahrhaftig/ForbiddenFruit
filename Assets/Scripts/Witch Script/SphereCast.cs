@@ -100,11 +100,11 @@ public class SphereCast : MonoBehaviour
                         witchLogic.setTargetPlayer(player);
 
 
-                        animator.SetTrigger("capture");
-                        //animator.SetBool("isIdle", false);
-                        //animator.SetBool("isChasing", false);
-                        //animator.SetBool("isPatrolling", false);
-                        //animator.SetBool("isCapturing", true);
+                        //animator.SetTrigger("capture");
+                        animator.SetBool("isIdle", false);
+                        animator.SetBool("isChasing", false);
+                        animator.SetBool("isPatrolling", false);
+                        animator.SetBool("isCapturing", true);
                     }
                 }
             }           

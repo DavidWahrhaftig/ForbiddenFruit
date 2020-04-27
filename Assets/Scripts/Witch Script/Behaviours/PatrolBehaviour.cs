@@ -76,9 +76,9 @@ public class PatrolBehaviour : StateMachineBehaviour //the instance of the State
                 //direction = patrolPositions[randomIndex] - animator.transform.position;
                 if (counter == numOfPositions)
                 {
-                    //animator.SetBool("isIdle", true);
-                    //animator.SetBool("isPatrolling", false);
-                    animator.SetTrigger("idle");
+                    animator.SetBool("isIdle", true);
+                    animator.SetBool("isPatrolling", false);
+                    //animator.SetTrigger("idle");
                 }
             }
         }

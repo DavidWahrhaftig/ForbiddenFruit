@@ -67,11 +67,11 @@ public class IdleBehaviour : StateMachineBehaviour
             Debug.Log("Idle 4");
             if (animator.GetComponent<WitchLogic>().getTargetPlayer() == null) // catching bug
             {
-                //animator.SetBool("isIdle", false);
-                //animator.SetBool("isPatrolling", true);
-                //animator.SetBool("isChasing", false);
+                animator.SetBool("isIdle", false);
+                animator.SetBool("isPatrolling", true);
+                animator.SetBool("isChasing", false);
 
-                animator.SetTrigger("patrol");
+                //animator.SetTrigger("patrol");
             }
         }
     }
