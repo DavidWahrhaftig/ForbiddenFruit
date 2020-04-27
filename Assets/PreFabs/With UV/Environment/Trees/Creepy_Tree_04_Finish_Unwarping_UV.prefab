@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1935149357586983764}
   m_Layer: 0
   m_Name: Creepy_Tree_04_Finish_Unwarping_UV
-  m_TagString: Untagged
+  m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 4925732943870433684}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -216,7 +216,6 @@ MonoBehaviour:
   movementVector: {x: 0, y: 0.2, z: 0}
   period: 2
   isOscillating: 1
-  isFruit: 1
 --- !u!114 &128813146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1862d9526c13264409501821279add96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 8
   colliders: []
   currentArea: {fileID: 0}
   spawnAreas: []

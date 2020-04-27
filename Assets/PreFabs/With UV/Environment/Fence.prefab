@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 390402723341603856}
   m_Layer: 0
   m_Name: Fence
-  m_TagString: Untagged
+  m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,6 +57,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: bc6e565346de4c8478fd074fb124d7a1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a29afb9fd942ae48ae5ab3ef170c07d, type: 2}
     - target: {fileID: -4216859302048453862, guid: bc6e565346de4c8478fd074fb124d7a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -127,11 +132,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.7451183
       objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: bc6e565346de4c8478fd074fb124d7a1,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0a29afb9fd942ae48ae5ab3ef170c07d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc6e565346de4c8478fd074fb124d7a1, type: 3}
 --- !u!4 &2974136721800801805 stripped

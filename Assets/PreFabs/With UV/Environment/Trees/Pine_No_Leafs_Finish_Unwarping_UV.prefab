@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4575594584995201268}
   - component: {fileID: 7801165167149775885}
   - component: {fileID: 2832828560946446327}
+  - component: {fileID: 5358646681801513518}
   m_Layer: 0
   m_Name: Pine_No_Leafs_Finish_Unwarping_UV
   m_TagString: Untagged
@@ -93,3 +94,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7964454727577023273, guid: 5407c18f7144d6242a3e4b78f9283e8c, type: 3}
+--- !u!136 &5358646681801513518
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8394595835828947153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.17
+  m_Height: 6.1
+  m_Direction: 2
+  m_Center: {x: 0.05, y: 0.2, z: 2.4573643}
