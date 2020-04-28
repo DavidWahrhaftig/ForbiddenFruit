@@ -17,6 +17,7 @@ public class CameraShake : MonoBehaviour
     // Start is called before the first frame update
 
     public bool canShake;
+    public bool enableShakeAnimation = true;
     void Start()
     {
         camAnim = GetComponent<Animator>();
@@ -47,13 +48,21 @@ public class CameraShake : MonoBehaviour
 
     public void camShakeLeft()
     {
-        camAnim.SetTrigger("Shake Left");
+        if (enableShakeAnimation)
+        {
+            camAnim.SetTrigger("Shake Left");
+        }
+        
         power += gain;
     }
 
     public void camShakeRight()
     {
-        camAnim.SetTrigger("Shake Right");
+        if (enableShakeAnimation)
+        {
+            camAnim.SetTrigger("Shake Right");
+        }
+        
         power += gain;
     }
 

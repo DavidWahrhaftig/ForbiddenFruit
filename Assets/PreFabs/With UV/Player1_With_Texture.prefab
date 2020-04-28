@@ -579,6 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f60bd71dff427849a782c229d3b013e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chaseResistanceTime: 2
   fieldOfViewX: 1
   playerBase: {fileID: 0}
   camera: {fileID: 0}
@@ -587,7 +588,7 @@ MonoBehaviour:
   audioSource: {fileID: 5979905006953725235}
   hitSound: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
   caughtSound: {fileID: 8300000, guid: 552fb9ffbc6737c479a2ce1e2bf5efe6, type: 3}
-  counterUI: {fileID: 0}
+  fruitCounterUI: {fileID: 0}
   playerSkin: {fileID: 7119814995086653479}
   glowMaterial: {fileID: 2100000, guid: 1e608df5b86f11d47a79cea9127e28a7, type: 2}
   fruitCounter: 0
@@ -14002,6 +14003,7 @@ MonoBehaviour:
   power: 0
   resistanceMeter: 0
   canShake: 0
+  enableShakeAnimation: 1
 --- !u!1 &7475318884438950862
 GameObject:
   m_ObjectHideFlags: 0
