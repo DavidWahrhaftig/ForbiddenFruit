@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6142098302776621183}
   - component: {fileID: 2139239037950199920}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Collider1
   m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,6 +76,7 @@ Transform:
   m_Children:
   - {fileID: 6142098302776621183}
   - {fileID: 6317833927754045237}
+  - {fileID: 5799626848215021067}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,11 +135,55 @@ MeshCollider:
   m_GameObject: {fileID: 2040720668195468592}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -6521751864595673523, guid: 6a970a614581db04594b43e3cfa8ec0e, type: 3}
+--- !u!1 &6014133885107767434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5799626848215021067}
+  - component: {fileID: 7084589927728992955}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Environment Prop
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5799626848215021067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014133885107767434}
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3957705, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3029024218202261283}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7084589927728992955
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014133885107767434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7326052292537472971
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +195,7 @@ GameObject:
   - component: {fileID: 6317833927754045237}
   - component: {fileID: 6541795738231155597}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Collider2
   m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

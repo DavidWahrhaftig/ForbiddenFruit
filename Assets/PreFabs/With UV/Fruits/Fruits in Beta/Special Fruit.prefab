@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1862d9526c13264409501821279add96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 8
+  radius: 3
   colliders: []
   currentArea: {fileID: 0}
   spawnAreas: []

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4815978003938109525}
   - component: {fileID: 5155680964122619360}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Trigger
   m_TagString: Environment Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ SphereCollider:
   m_GameObject: {fileID: 4926017825222675509}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1.45
   m_Center: {x: 0, y: 0, z: 0}

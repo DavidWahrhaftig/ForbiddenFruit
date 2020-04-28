@@ -107,13 +107,15 @@ public class FruitSpawnManager : MonoBehaviour
 
     bool PreventSpawnOverLap(Vector3 spawnPos)
     {
-        int numColliding = Physics.OverlapSphereNonAlloc(spawnPos, radius, colliders);
-        
+        //int numColliding = Physics.OverlapSphereNonAlloc(spawnPos, radius, colliders,  0 , QueryTriggerInteraction.Collide);
+        //int numColliding = Physics.OverlapSphereNonAlloc(spawnPos, radius, colliders);
+
         //colliders = Physics.OverlapSphere(transform.position, radius);
-        //colliders = Physics.OverlapSphere(spawnPos, radius);
+        colliders = Physics.OverlapSphere(spawnPos, radius);
         //int numColliding = Physics.OverlapSphereNonAlloc(spawnPos, radius, colliders);
 
         //int nonTriggers = 0;
+        Debug.LogWarning(" ************* colliders length = " + colliders.Length);
 
         for (int i = 0; i < colliders.Length; i++)
         {

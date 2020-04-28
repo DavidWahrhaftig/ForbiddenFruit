@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2268844139862380114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2286158263469321378}
+  - component: {fileID: 978497924273125807}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Environment Prop
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2286158263469321378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268844139862380114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4766147298530441922}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &978497924273125807
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268844139862380114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.17
+  m_Height: 6.1
+  m_Direction: 2
+  m_Center: {x: 0.05, y: 0.2, z: 2.4573643}
 --- !u!1 &8394595835828947153
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +57,6 @@ GameObject:
   - component: {fileID: 4575594584995201268}
   - component: {fileID: 7801165167149775885}
   - component: {fileID: 2832828560946446327}
-  - component: {fileID: 5358646681801513518}
   m_Layer: 0
   m_Name: Pine_No_Leafs_Finish_Unwarping_UV
   m_TagString: Untagged
@@ -30,7 +74,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -10.942635, y: 0.17, z: 0.5}
   m_LocalScale: {x: 0.451675, y: 0.451675, z: 0.635703}
-  m_Children: []
+  m_Children:
+  - {fileID: 2286158263469321378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -94,17 +139,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7964454727577023273, guid: 5407c18f7144d6242a3e4b78f9283e8c, type: 3}
---- !u!136 &5358646681801513518
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8394595835828947153}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.17
-  m_Height: 6.1
-  m_Direction: 2
-  m_Center: {x: 0.05, y: 0.2, z: 2.4573643}
