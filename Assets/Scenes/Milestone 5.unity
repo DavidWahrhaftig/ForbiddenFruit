@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.18
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1331949770}
-  m_IndirectSpecularColor: {r: 0.06318263, g: 0.07314079, b: 0.05254627, a: 0.18}
+  m_IndirectSpecularColor: {r: 0.06310668, g: 0.07311683, b: 0.05253371, a: 0.18}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7233,7 +7233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.7764706}
-  limit: 2
+  limit: 1
   fruitsInside: 0
 --- !u!1 &446108104
 GameObject:
@@ -7725,7 +7725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.7764706}
-  limit: 5
+  limit: 3
   fruitsInside: 0
 --- !u!1001 &501227624
 PrefabInstance:
@@ -14011,7 +14011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.7764706}
-  limit: 6
+  limit: 7
   fruitsInside: 0
 --- !u!1001 &931979168
 PrefabInstance:
@@ -28945,7 +28945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.7764706}
-  limit: 6
+  limit: 7
   fruitsInside: 0
 --- !u!1001 &1651635855
 PrefabInstance:
@@ -30485,7 +30485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.7764706}
-  limit: 3
+  limit: 2
   fruitsInside: 0
 --- !u!1001 &1824457163
 PrefabInstance:
@@ -32857,7 +32857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.7764706}
-  limit: 5
+  limit: 3
   fruitsInside: 0
 --- !u!4 &1996276228 stripped
 Transform:
@@ -35992,7 +35992,7 @@ PrefabInstance:
     - target: {fileID: 3323800234281984307, guid: bb24be541b04670498571f541d25a4c1,
         type: 3}
       propertyPath: respawnable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 128813146, guid: bb24be541b04670498571f541d25a4c1, type: 3}
       propertyPath: m_Enabled
@@ -36076,6 +36076,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
         type: 3}
+      propertyPath: _userData.mouseMaps.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[1]._defaultMouseMaps.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[2]._defaultMouseMaps.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
       propertyPath: _userData.players.Array.data[1]._defaultJoystickMaps.Array.data[0]._enabled
       value: 1
       objectReference: {fileID: 0}
@@ -36113,6 +36133,96 @@ PrefabInstance:
         type: 3}
       propertyPath: _userData.players.Array.data[1]._defaultKeyboardMaps.Array.data[1]._enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMapIdCounter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[0]._actionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[0]._elementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[0]._elementIdentifierId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[1]._actionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[1]._elementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[1]._elementIdentifierId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[2]._actionId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[2]._elementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[2]._elementIdentifierId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[3]._actionId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[3]._elementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[3]._elementIdentifierId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[1]._defaultMouseMaps.Array.data[0]._enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[2]._defaultMouseMaps.Array.data[0]._enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[0]._invert
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.inputBehaviors.Array.data[0]._mouseXYAxisSensitivity
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643552057425524222, guid: 8ccf980a37a874f0589e0343bde5a3ce,
+        type: 3}
+      propertyPath: _userData.players.Array.data[2]._assignMouseOnStart
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ccf980a37a874f0589e0343bde5a3ce, type: 3}

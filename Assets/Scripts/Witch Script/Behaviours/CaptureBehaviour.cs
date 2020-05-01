@@ -206,12 +206,18 @@ public class CaptureBehaviour : StateMachineBehaviour
             fruitDropTime = fruitDropTime * 1.1f;
             fruitLossRate *= 2;
         }
+        else if (fruitCount <= 45){
+            goal = fruitCount * 2;
+            fruitDropTime = fruitDropTime * 1.2f;
+            fruitLossRate *= 2;
+        }
 
         else
         {
-            goal = 40f + (fruitCount - 10) * 1;
+            goal = fruitCount * 2;
+            //goal = 40f + (fruitCount - 10) * 1;
             fruitDropTime = fruitDropTime * 1.3f;
-            fruitLossRate *= 2;
+            fruitLossRate *= 3;
         }
 
 

@@ -204,6 +204,7 @@ public class PlayerLogic : MonoBehaviour
 
         // update the fruitCoutner
         fruitCounter -= fruitToLose;
+
         // animate the fruitCounter UI
         fruitCounterUI.GetComponent<Animator>().SetTrigger("fruitLoss"); // do lose animation of fruit counter
 
@@ -308,7 +309,12 @@ public class PlayerLogic : MonoBehaviour
             fruitToLose.transform.rotation = transform.rotation;
             fruitToLose.GetComponent<FruitLossProp>().setPlayer(gameObject);
 
-            fruitToLose.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f,1f), 0f, Random.Range(-1f, 1f)));
+            float projectileX = Random.Range(-6f, 6f);
+            float projectileZ = Random.Range(-6f, 6f);
+            float projectileY = Random.Range(1f, 2f);
+
+            //fruitToLose.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f,1f), 0f, Random.Range(-1f, 1f)));
+            fruitToLose.GetComponent<Rigidbody>().AddForce(new Vector3(projectileX, projectileY, projectileZ));
             fruitToLose.GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(-0.5f, 0.5f), 0f, 0f));
         }
         else

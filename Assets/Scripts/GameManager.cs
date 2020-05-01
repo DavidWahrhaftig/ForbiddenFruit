@@ -218,6 +218,14 @@ public class GameManager : MonoBehaviour
                 //magicSlider1.gameObject.SetActive(false);
                 //magicSlider2.gameObject.SetActive(false);
 
+                // set inactive ui magic meters
+                shotTimer1.gameObject.SetActive(false);
+                shotTimer2.gameObject.SetActive(false);
+                magicSlider1.gameObject.SetActive(false);
+                magicSlider2.gameObject.SetActive(false);
+                
+
+
                 if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
                 {
                     gameResult1.text = "Merlin's Apprentice";
@@ -245,10 +253,12 @@ public class GameManager : MonoBehaviour
 
 
                 // restart game when pressing Y or triangle button
+                /*
                 if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Ready") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Ready"))
                 {
                     Restart();
                 }
+                */
             }
             else
             {

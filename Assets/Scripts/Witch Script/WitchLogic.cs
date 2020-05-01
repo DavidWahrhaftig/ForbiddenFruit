@@ -53,11 +53,6 @@ public class WitchLogic : MonoBehaviour
         witchAnimator.SetBool("isIdle", true);
         witchAnimator.SetBool("isPatrolling", false);
 
-        if (gameManager.isGameOver())
-        {
-            gameOver();
-        }
-
         targetPlayer = null;
     }
 

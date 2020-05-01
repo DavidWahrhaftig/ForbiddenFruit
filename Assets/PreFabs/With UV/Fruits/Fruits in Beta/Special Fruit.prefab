@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 3323800234281984301}
   - component: {fileID: 2884263363213449590}
   - component: {fileID: 128813146}
+  - component: {fileID: 2742679577497968367}
   m_Layer: 0
   m_Name: Special Fruit
   m_TagString: SpecialFruit
@@ -232,6 +233,25 @@ MonoBehaviour:
   colliders: []
   currentArea: {fileID: 0}
   spawnAreas: []
+--- !u!95 &2742679577497968367
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323800234281984305}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 536bb05e534e24845a5f813d5559e028, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1084620971686649302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243,6 +263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blue Fruit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133063018449834674, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1081091725140123809, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
         type: 3}
@@ -400,6 +425,16 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 2.68e-43
       objectReference: {fileID: 0}
+    - target: {fileID: 6968451186143702629, guid: a544c3685b96bfd43ac4aaf4a4c3e1ad,
+        type: 3}
+      propertyPath: m_Range
+      value: 1.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968451186143702629, guid: a544c3685b96bfd43ac4aaf4a4c3e1ad,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a544c3685b96bfd43ac4aaf4a4c3e1ad, type: 3}
 --- !u!1 &4655211716272593910 stripped
@@ -425,6 +460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Red Fruit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028662389830504608, guid: 4299ae1bd6c1e884b97803196a6405d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2043686165348360883, guid: 4299ae1bd6c1e884b97803196a6405d9,
         type: 3}

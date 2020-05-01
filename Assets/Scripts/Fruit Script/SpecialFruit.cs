@@ -167,6 +167,7 @@ public class SpecialFruit : MonoBehaviour
 
         }
         currentActiveFruit.SetActive(true);
+        GetComponent<Animator>().SetTrigger("spawnFruit");
         //GetComponent<Oscillator>().isOscillating = true;
         isCollectable = true;
 
